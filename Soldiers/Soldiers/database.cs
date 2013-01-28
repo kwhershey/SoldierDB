@@ -230,6 +230,19 @@ namespace Soldiers
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
 
+            /*
+            string sql = string.Format("insert into soldiers (id, f_name, mid_name, l_name, maid_name, b_date_month, b_date_day, b_date_year, b_loc_city, b_loc_county, b_loc_state, b_loc_country, d_date_month, d_date_day, d_date_year, d_loc_city, d_loc_county, d_loc_state, d_loc_country, c_name, c_latitude, c_longitude, c_loc_city, c_loc_county, c_loc_state, c_loc_country, marker_text, pension_text, pension_number, sources, added_text, service_text) values ({0}, '{1}', '{2}', '{3}', '{4}', {5}, {6}, {7}, '{8}', '{9}', '{10}', '{11}', {12}, {13}, {14}, '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}');",
+                soldierToAdd.id.ToString(), soldierToAdd.soldierName.first, soldierToAdd.soldierName.middle, soldierToAdd.soldierName.last, soldierToAdd.soldierName.maiden,
+                soldierToAdd.birthDate.month.ToString(), soldierToAdd.birthDate.day.ToString(), soldierToAdd.birthDate.year.ToString(),
+                soldierToAdd.birthLocation.city, soldierToAdd.birthLocation.county, soldierToAdd.birthLocation.state, soldierToAdd.birthLocation.country,
+                soldierToAdd.deathDate.month.ToString(), soldierToAdd.deathDate.day.ToString(), soldierToAdd.deathDate.year.ToString(),
+                soldierToAdd.deathLocation.city, soldierToAdd.deathLocation.county, soldierToAdd.deathLocation.state, soldierToAdd.deathLocation.country,
+                soldierToAdd.cemetery, soldierToAdd.cemeteryLatitude, soldierToAdd.cemeteryLongitude, soldierToAdd.cemeteryLocation.city, soldierToAdd.cemeteryLocation.county, soldierToAdd.cemeteryLocation.state, soldierToAdd.cemeteryLocation.country,
+                soldierToAdd.markerText, soldierToAdd.pensionText, soldierToAdd.pensionNumber, soldierToAdd.sources, soldierToAdd.addedText, soldierToAdd.serviceAddedText);
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            command.ExecuteNonQuery();
+             */
+
         }
 
         //removes soldier from soldiers table and removes all aphiliated data from other tables
