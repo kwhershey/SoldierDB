@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+//This class is basically a copy of the details soldier, but trimmed down
 namespace Soldiers
 {
     public partial class SearchForm : Form
@@ -122,7 +124,9 @@ namespace Soldiers
             this.Close();
         }
 
-        private void buttonSubmit_Click(object sender, EventArgs e)
+
+        //THIS NOW DOES SEARCHING.  DOES NOT ADD TO DATABASE
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
             database db = new database(databaseFile);
 

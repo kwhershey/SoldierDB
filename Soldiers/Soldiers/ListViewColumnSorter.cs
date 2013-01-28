@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 /// <summary>
 /// This class is an implementation of the 'IComparer' interface.
+/// Credit to http://support.microsoft.com/kb/319401
 /// </summary>
 public class ListViewColumnSorter : IComparer
 {

@@ -8,6 +8,8 @@ namespace Soldiers
 {
     public class child
     {
+        //keeps track of spouse id for the database.  I don't 
+        //think the soldierId is ever used.
         public name name = new name();
         public int soldierID;
         public int spouseID;

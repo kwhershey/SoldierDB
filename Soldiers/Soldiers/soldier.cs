@@ -63,6 +63,7 @@ namespace Soldiers
 
         }
 
+        //fills in the listview columns
         public void printToListView(ListView printBox)
         {
             string[] soldierToPrint = { soldierName.bookString(), birthDate.ToString(), birthLocation.ToString(), deathDate.ToString(), deathLocation.ToString(), cemetery , cemeteryLocation.ToString(),
@@ -78,6 +79,7 @@ namespace Soldiers
          
         }
 
+        //returns true if name matches what is in the filter textbox
         public bool filter(string text)
         {
             if (soldierName.first.ToLower().Contains(text) || soldierName.middle.ToLower().Contains(text) || soldierName.last.ToLower().Contains(text) || soldierName.maiden.ToLower().Contains(text) || soldierName.ToString().ToLower().Contains(text))
@@ -87,6 +89,7 @@ namespace Soldiers
             return false;
         }
 
+        //sorts by names bookstring
         public int CompareTo(Soldier other)
         {
             return soldierName.CompareTo(other.soldierName);

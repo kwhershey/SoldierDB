@@ -8,6 +8,8 @@ namespace Soldiers
 {
     public class countySoldier:IComparable<countySoldier>
     {
+        //This class is used for printing the book.  Implements IComparable for the soldier associated with
+        //the county so that you can sort the soldiers for the county index.
         public name soldierName = new name();
         public String county;
 

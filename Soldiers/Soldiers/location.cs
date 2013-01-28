@@ -51,11 +51,13 @@ namespace Soldiers
            
         }
 
+        /*
         public string toDatabaseString()
         {
             return city.PadRight(30) + " " + county.PadRight(20) + " " + state.PadRight(20) + " " + country.PadRight(20);
         }
-
+        */
+          
         public bool isIllinoisCounty()
         {
             county.Trim();

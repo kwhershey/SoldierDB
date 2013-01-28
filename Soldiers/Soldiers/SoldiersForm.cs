@@ -29,6 +29,7 @@ namespace Soldiers
             this.listViewSoldiers.ListViewItemSorter = lvwColumnSorter;
         }
 
+        //handles calling on a custom database
         public SoldiersForm(String db)
         {
             databaseFile = db;
@@ -43,6 +44,7 @@ namespace Soldiers
 
         //setups
 
+        //initialize columns and buttons
         public void setupListviewForSoldierObjectPrint()
         {
             listViewSoldiers.Items.Clear();
@@ -67,6 +69,7 @@ namespace Soldiers
 
         }
 
+        //enables or disables proper buttons
         private void listViewSoldiers_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewSoldiers.SelectedItems.Count == 1)
@@ -106,11 +109,13 @@ namespace Soldiers
 
         }
 
+        //info about the app
         private void menuStripItemAbout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Soldiers Buried in Illinois Database \nVersion 1.3 \nCreated by: Kyle Hershey \nDate: December 2012 \nContact: kwhershey@gmail.com");
         }
 
+        //prints the book as a text file
         private void menuStripItemPrintBook_Click(object sender, EventArgs e)
         {
 
@@ -367,6 +372,7 @@ namespace Soldiers
 
         }
 
+        //disabled.  Might reenable if future interest
         private void menuStripItemPrintLatexBook_Click(object sender, EventArgs e)
         {
 
@@ -629,6 +635,7 @@ namespace Soldiers
 
         }
 
+        //opens a secondart database
         private void menuStripItemOpenDatabase_Click(object sender, EventArgs e)
         {
             OpenFileDialog browseFile = new OpenFileDialog();
@@ -652,6 +659,7 @@ namespace Soldiers
             }
         }
 
+        //creates an empty database from the template database
         private void menuStripItemCreateDatabase_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();//NEW
@@ -786,6 +794,7 @@ namespace Soldiers
 
         //sorting and filtering
 
+        //refreshes the list to match the filter
         private void textBoxFilter_TextChanged(object sender, EventArgs e)
         {
             listViewSoldiers.Items.Clear();
@@ -812,6 +821,7 @@ namespace Soldiers
             
         }
 
+        //resorts using the ListViewColumnSorter class
         private void listViewSoldiers_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             if (e.Column == lvwColumnSorter.SortColumn)
@@ -837,6 +847,7 @@ namespace Soldiers
             this.listViewSoldiers.Sort();
         }
 
+        //opens advanced search dialogue
         private void menuStripItemAdvancedSearch_Click(object sender, EventArgs e)
         {
             SearchForm newSearch = new SearchForm(this);

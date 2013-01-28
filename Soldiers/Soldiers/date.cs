@@ -23,12 +23,16 @@ namespace Soldiers
             year = y;
         }
 
+        /*
         public date(String timeblock)
         {
             month = Convert.ToInt32(timeblock.Substring(0, 2));
             day = Convert.ToInt32(timeblock.Substring(2, 2));
             year = Convert.ToInt32(timeblock.Substring(4, 4));
         }
+         */
+
+        //returns year day month
         public override string ToString()
         {
             string monthString;
@@ -90,6 +94,8 @@ namespace Soldiers
             
         }
 
+
+        /*
         public string getTimeblock()
         {
             String timeblock = "";
@@ -109,7 +115,9 @@ namespace Soldiers
             return timeblock;
 
         }
+         */
 
+        //returns month day year
         public string BookString()
         {
             string monthString;
@@ -171,6 +179,7 @@ namespace Soldiers
 
         }
 
+        //returns if no date info
         public bool isUndetermined()
         {
             return month == 0 && day == 0 && year == 0;

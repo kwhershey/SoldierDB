@@ -13,10 +13,11 @@ namespace Soldiers
     public partial class DetailsForm : Form
     {
         public Soldier detailsSoldier;
-        public bool newSoldier;
-        public SoldiersForm parentForm;
+        public bool newSoldier;  //is this soldier new to the database? Important for adding to db
+        public SoldiersForm parentForm; //so we know what db to edit, and so we can refresh list when done
         public String databaseFile = "";
 
+        //handles loading existing and duplicating
         public DetailsForm(Soldier ds , bool ns, SoldiersForm parent)
         {
             detailsSoldier = ds;
@@ -29,6 +30,7 @@ namespace Soldiers
             //detailsSoldier = new Soldier();
         }
 
+        //handles starting from scratch
         public DetailsForm(SoldiersForm parent)
         {
             detailsSoldier = new Soldier();
@@ -42,6 +44,7 @@ namespace Soldiers
 
         //loads and setup
 
+        //loads listView columns and makes sure correct buttons are disabled
         public void setupForm()
         {
             listViewSpouses.View = View.Details;
@@ -128,6 +131,7 @@ namespace Soldiers
             buttonRemoveTroop.Enabled = false;
         }
 
+        //loads information for soldier into the form
         public void loadInfo()
         {
             setupForm();
@@ -155,8 +159,8 @@ namespace Soldiers
             textBoxLongitude.Text = detailsSoldier.cemeteryLongitude;
             textBoxCemeteryCity.Text = detailsSoldier.cemeteryLocation.city;
             textBoxCemeteryCounty.Text = detailsSoldier.cemeteryLocation.county;
-            //textBoxCemeteryState.Text = detailsSoldier.cemeteryLocation.state;
-            //textBoxCemeteryCountry.Text = detailsSoldier.cemeteryLocation.country;
+            textBoxCemeteryState.Text = detailsSoldier.cemeteryLocation.state;
+            textBoxCemeteryCountry.Text = detailsSoldier.cemeteryLocation.country;
             textBoxService.Text = detailsSoldier.serviceAddedText;
             textBoxMarker.Text = detailsSoldier.markerText;
             textBoxPension.Text = detailsSoldier.pensionNumber;
@@ -219,6 +223,7 @@ namespace Soldiers
 
         }
 
+        //handles our defaults
         public void loadDefaultInfo()
         {
             textBoxBirthCountry.Text = "USA";
@@ -229,11 +234,15 @@ namespace Soldiers
 
         //buttons
 
+        //closes the form
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //compiles the soldier and changes database
+        //for new soldiers, generates id and add it
+        //for existing, updates (removes then adds)
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             if (textBoxSoldierFirstName.Text == "" && textBoxSoldierLastName.Text == "")
@@ -386,6 +395,8 @@ namespace Soldiers
             this.Close();
         }
 
+        //Adding to listviews
+
         private void buttonAddPosition_Click(object sender, EventArgs e)
         {
             string[] newPos = {textBoxPosition.Text};
@@ -534,6 +545,8 @@ namespace Soldiers
 
         }
 
+        //removes from listviews
+
         private void buttonRemovePosition_Click(object sender, EventArgs e)
         {
             listViewPositions.Items.Remove(listViewPositions.SelectedItems[0]);
@@ -613,6 +626,8 @@ namespace Soldiers
             comboBoxMoveOutMonth.SelectedIndex = 0;
             comboBoxMoveOutYear.SelectedIndex = 0;
         }
+
+        //update listview entries
 
         private void buttonUpdatePosition_Click(object sender, EventArgs e)
         {

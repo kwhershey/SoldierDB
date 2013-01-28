@@ -15,11 +15,14 @@ namespace Soldiers
         public SQLiteConnection m_dbConnection; //our handle
         public String path = "C:\\Program Files\\DAR Illinois Soldiers Database\\";
 
+
+        //uses opendb to open the default database located at "path"
         public database()
         {
             opendb();
         }
 
+        //opens a custom database given its file path.
         public database(String filePath)
         {
             if (filePath == "")
@@ -41,6 +44,7 @@ namespace Soldiers
             }
         }
         
+        //opens the default database
         public void opendb()
         {
             if (!File.Exists(path + "soldierdb.s3db"))
@@ -54,11 +58,13 @@ namespace Soldiers
             }
         }
 
+        //closes the database.  I haven't used this anywhere
         public void closedb()
         {
             m_dbConnection.Close();
         }
 
+        //returns a list of all the soldiers in the database.
         public List<Soldier> Soldiers()
         {
             List<Soldier> soldiers = new List<Soldier>();
@@ -69,6 +75,7 @@ namespace Soldiers
 
             while (reader.Read())
             {
+                //all of the info in the soliers table
                 Soldier newSoldier = new Soldier();
                 newSoldier.id = Convert.ToInt32(reader["id"]);
                 newSoldier.soldierName.first = reader["f_name"].ToString();
@@ -95,7 +102,9 @@ namespace Soldiers
                 newSoldier.cemeteryLocation.city = reader["c_loc_city"].ToString();
                 newSoldier.cemeteryLocation.county = reader["c_loc_county"].ToString();
                 newSoldier.cemeteryLocation.state = "Illinois";
+                //newSoldier.cemeteryLocation.state = reader["c_loc_state"].ToString();
                 newSoldier.cemeteryLocation.country = "USA";
+                //newSoldier.cemeteryLocation.country = reader["c_loc_country"].ToString();
 
                 //read spouses
                 string readSpouses = String.Format("select * from spouses where soldier_id={0};", newSoldier.id.ToString());
@@ -206,6 +215,8 @@ namespace Soldiers
             return soldiers;
         }
 
+        //adds a soldier to the soldiers table.  Other tables are left alone.
+        //PRE: Soldier must have unique id
         public void addSoldier(Soldier soldierToAdd)
         {
             string sql = string.Format("insert into soldiers (id, f_name, mid_name, l_name, maid_name, b_date_month, b_date_day, b_date_year, b_loc_city, b_loc_county, b_loc_state, b_loc_country, d_date_month, d_date_day, d_date_year, d_loc_city, d_loc_county, d_loc_state, d_loc_country, c_name, c_latitude, c_longitude, c_loc_city, c_loc_county, marker_text, pension_text, pension_number, sources, added_text, service_text) values ({0}, '{1}', '{2}', '{3}', '{4}', {5}, {6}, {7}, '{8}', '{9}', '{10}', '{11}', {12}, {13}, {14}, '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}');",
@@ -221,6 +232,7 @@ namespace Soldiers
 
         }
 
+        //removes soldier from soldiers table and removes all aphiliated data from other tables
         public void removeSoldier(Soldier soldierToRemove)
         {
             string sql = String.Format("delete from soldiers where id={0};",soldierToRemove.id);
@@ -252,12 +264,16 @@ namespace Soldiers
             deleteCommand.ExecuteNonQuery();
         }
 
+        //calls removeSoldier, then addSoldier
+        //NOTICE: removes data from all tables, only adds back into soldiers table
         public void updateSoldier(Soldier soldierToUpdate)
         {
             removeSoldier(soldierToUpdate);
             addSoldier(soldierToUpdate);
         }
 
+        //adds a spouse to the spouse table.  
+        //PRE: must have unique ID
         public void addSpouse(spouse spouseToAdd,Int32 soldierID)
         {
             string sql = string.Format("insert into spouses (id, soldier_id, f_name, mid_name, l_name, maid_name, m_date_day, m_date_month, m_date_year, m_loc_city, m_loc_county, m_loc_state, m_loc_country) values ({0}, {1}, '{2}', '{3}', '{4}', '{5}', {6}, {7}, {8}, '{9}', '{10}', '{11}', '{12}');",
@@ -268,6 +284,7 @@ namespace Soldiers
             command.ExecuteNonQuery();   
         }
 
+        //remove all spouses that match the soldiers id
         public void removeSpouses(Soldier soldierSpousesToRemove)
         {
             string sql = String.Format("delete from spouses where soldier_id={0};", soldierSpousesToRemove.id);
@@ -275,6 +292,7 @@ namespace Soldiers
             deleteCommand.ExecuteNonQuery();
         }
 
+        //adds a child to the table. 
         public void addChild(child childToAdd, Int32 soldierID)
         {
             string sql = string.Format("insert into children (soldier_id, spouse_id, f_name, mid_name, l_name, maid_name) values ({0}, {1}, '{2}', '{3}', '{4}', '{5}');",
@@ -283,6 +301,7 @@ namespace Soldiers
             command.ExecuteNonQuery();  
         }
 
+        //remove all children that match soldiers id
         public void removeChildren(Soldier soldierChildrenToRemove)
         {
             string sql = String.Format("delete from children where soldier_id={0};", soldierChildrenToRemove.id);
@@ -290,6 +309,7 @@ namespace Soldiers
             deleteCommand.ExecuteNonQuery();
         }
 
+        //adds to the rank table
         public void addRank(String rankToAdd, Int32 soldierID)
         {
             string sql = string.Format("insert into ranks (soldier_id, rank) values ({0}, '{1}');",
@@ -298,6 +318,7 @@ namespace Soldiers
             command.ExecuteNonQuery();
         }
 
+        //removes all ranks with soldierID
         public void removeRanks(Soldier soldierRanksToRemove)
         {
             string sql = String.Format("delete from ranks where soldier_id={0};", soldierRanksToRemove.id);
@@ -305,6 +326,7 @@ namespace Soldiers
             deleteCommand.ExecuteNonQuery();
         }
 
+        //add to the residence table
         public void addResidence(residence resToAdd, Int32 soldierID)
         {
             string sql = string.Format("insert into residences (soldier_id, b_date_day, b_date_month, b_date_year, e_date_day, e_date_month, e_date_year, city, county, state, country) values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, '{7}', '{8}', '{9}', '{10}');",
@@ -316,6 +338,7 @@ namespace Soldiers
             command.ExecuteNonQuery();
         }
 
+        //removes all residences with soldierID
         public void removeResidences(Soldier soldierResidencesToRemove)
         {
             string sql = String.Format("delete from residences where soldier_id={0};", soldierResidencesToRemove.id);
@@ -323,6 +346,7 @@ namespace Soldiers
             deleteCommand.ExecuteNonQuery();
         }
 
+        //adds to the superiors table
         public void addSuperior(String superiorToAdd, Int32 soldierID)
         {
             string sql = string.Format("insert into superiors (soldier_id, superior) values ({0}, '{1}');",
@@ -331,6 +355,7 @@ namespace Soldiers
             command.ExecuteNonQuery();
         }
 
+        //removes all superiors with soldierID
         public void removeSuperiors(Soldier soldierSuperiorsToRemove)
         {
             string sql = String.Format("delete from superiors where soldier_id={0};", soldierSuperiorsToRemove.id);
@@ -338,6 +363,7 @@ namespace Soldiers
             deleteCommand.ExecuteNonQuery();
         }
 
+        //adds to the troops table
         public void addTroop(String troopToAdd, Int32 soldierID)
         {
             string sql = string.Format("insert into troops (soldier_id, troop) values ({0}, '{1}');",
@@ -346,6 +372,7 @@ namespace Soldiers
             command.ExecuteNonQuery();
         }
 
+        //removes all troops with soldierID
         public void removeTroops(Soldier soldierTroopsToRemove)
         {
             string sql = String.Format("delete from troops where soldier_id={0};", soldierTroopsToRemove.id);
@@ -353,6 +380,7 @@ namespace Soldiers
             deleteCommand.ExecuteNonQuery();
         }
 
+        //returns a unique id to be used for a new soldier
         public Int32 findNewSoldierID()
         {
             Int32 id = -1;
@@ -370,6 +398,7 @@ namespace Soldiers
             return id;
         }
 
+        //returns a unique id for the spouse table
         public Int32 findNewSpouseID()
         {
             Int32 id = 0;
@@ -388,6 +417,7 @@ namespace Soldiers
             return id;
         }
 
+        //children don't have an id, but this is left in case they do at some point.
         //public Int32 findNewChildID()
         //{
         //    Int32 id = -1;

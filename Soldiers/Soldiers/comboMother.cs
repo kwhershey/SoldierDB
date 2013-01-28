@@ -8,6 +8,7 @@ namespace Soldiers
 {
     class comboMother
     {
+        //A wrapper class for the mother dropdown of the child 
 		public spouse mother;
 
         public comboMother()

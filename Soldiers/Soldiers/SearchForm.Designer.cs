@@ -1130,9 +1130,9 @@
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(75, 23);
             this.buttonSubmit.TabIndex = 97;
-            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.Text = "Search";
             this.buttonSubmit.UseVisualStyleBackColor = true;
-            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // buttonCancel
             // 

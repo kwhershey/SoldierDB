@@ -25,6 +25,7 @@ namespace Soldiers
             marriageLocation = m;
         }
 
+        //sorts by name
         public override string ToString()
         {
             if (marriageDate.isUndetermined())

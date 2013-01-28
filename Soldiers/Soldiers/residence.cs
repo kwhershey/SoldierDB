@@ -23,6 +23,7 @@ namespace Soldiers
             place = p;
         }
 
+        //for printing book.  Generates sentence.
         public override string ToString()
         {
             if (moveInDate.isUndetermined() || moveOutDate.isUndetermined())
