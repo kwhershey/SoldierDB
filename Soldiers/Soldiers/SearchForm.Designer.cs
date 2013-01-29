@@ -92,6 +92,7 @@
             this.labelPension = new System.Windows.Forms.Label();
             this.textBoxPension = new System.Windows.Forms.TextBox();
             this.tabPageSpouses = new System.Windows.Forms.TabPage();
+            this.comboBoxMarriageCounty = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -131,6 +132,7 @@
             this.textBoxChildMaidenName = new System.Windows.Forms.TextBox();
             this.listViewChildren = new System.Windows.Forms.ListView();
             this.tabPageResidences = new System.Windows.Forms.TabPage();
+            this.comboBoxResidenceCounty = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -156,19 +158,17 @@
             this.textBoxExtra = new System.Windows.Forms.TextBox();
             this.tabPageSources = new System.Windows.Forms.TabPage();
             this.textBoxSources = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBoxResidenceAddedText = new System.Windows.Forms.TextBox();
             this.textBoxCemetery = new System.Windows.Forms.TextBox();
             this.textBoxSoldierFirstName = new System.Windows.Forms.TextBox();
             this.labelBirthLocation = new System.Windows.Forms.Label();
             this.labelCemetery = new System.Windows.Forms.Label();
             this.labelBirthDate = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBoxResidenceAddedText = new System.Windows.Forms.TextBox();
             this.comboBoxBirthCounty = new System.Windows.Forms.ComboBox();
             this.comboBoxDeathCounty = new System.Windows.Forms.ComboBox();
             this.comboBoxCemeteryCounty = new System.Windows.Forms.ComboBox();
-            this.comboBoxResidenceCounty = new System.Windows.Forms.ComboBox();
-            this.comboBoxMarriageCounty = new System.Windows.Forms.ComboBox();
             this.tabControlInfo.SuspendLayout();
             this.tabPageServiceText.SuspendLayout();
             this.tabPageServiceInfo.SuspendLayout();
@@ -1427,6 +1427,120 @@
             this.tabPageSpouses.Text = "Spouses";
             this.tabPageSpouses.UseVisualStyleBackColor = true;
             // 
+            // comboBoxMarriageCounty
+            // 
+            this.comboBoxMarriageCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxMarriageCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxMarriageCounty.FormattingEnabled = true;
+            this.comboBoxMarriageCounty.Items.AddRange(new object[] {
+            "Adams",
+            "Alexander ",
+            "Bond ",
+            "Boone ",
+            "Brown ",
+            "Bureau ",
+            "Calhoun ",
+            "Carroll ",
+            "Cass ",
+            "Champaign ",
+            "Christian ",
+            "Clark ",
+            "Clay ",
+            "Clinton ",
+            "Coles ",
+            "Cook ",
+            "Crawford ",
+            "Cumberland ",
+            "DeKalb ",
+            "DeWitt ",
+            "Douglas ",
+            "DuPage ",
+            "Edgar ",
+            "Edwards ",
+            "Effingham ",
+            "Fayette ",
+            "Ford ",
+            "Franklin ",
+            "Fulton ",
+            "Gallatin ",
+            "Greene ",
+            "Grundy ",
+            "Hamilton ",
+            "Hancock ",
+            "Hardin ",
+            "Henderson ",
+            "Henry ",
+            "Iroquois ",
+            "Jackson ",
+            "Jasper ",
+            "Jefferson ",
+            "Jersey ",
+            "Jo Daviess ",
+            "Johnson ",
+            "Kane ",
+            "Kankakee ",
+            "Kendall ",
+            "Knox ",
+            "Lake ",
+            "LaSalle ",
+            "Lawrence ",
+            "Lee ",
+            "Livingston ",
+            "Logan ",
+            "Macon ",
+            "Macoupin ",
+            "Madison ",
+            "Marion ",
+            "Marshall ",
+            "Mason ",
+            "Massac ",
+            "McDonough ",
+            "McHenry ",
+            "McLean ",
+            "Menard ",
+            "Mercer ",
+            "Monroe ",
+            "Montgomery ",
+            "Morgan ",
+            "Moultrie ",
+            "Ogle ",
+            "Peoria ",
+            "Perry ",
+            "Piatt ",
+            "Pike ",
+            "Pope ",
+            "Pulaski ",
+            "Putnam ",
+            "Randolph ",
+            "Richland ",
+            "Rock Island ",
+            "Saline ",
+            "Sangamon ",
+            "Schuyler ",
+            "Scott ",
+            "Shelby ",
+            "St. Clair ",
+            "Stark ",
+            "Stephenson ",
+            "Tazewell ",
+            "Union ",
+            "Vermilion ",
+            "Wabash ",
+            "Warren ",
+            "Washington ",
+            "Wayne ",
+            "White ",
+            "Whiteside ",
+            "Will ",
+            "Williamson ",
+            "Winnebago ",
+            "Woodford"});
+            this.comboBoxMarriageCounty.Location = new System.Drawing.Point(436, 163);
+            this.comboBoxMarriageCounty.Name = "comboBoxMarriageCounty";
+            this.comboBoxMarriageCounty.Size = new System.Drawing.Size(210, 21);
+            this.comboBoxMarriageCounty.TabIndex = 70;
+            this.comboBoxMarriageCounty.TextChanged += new System.EventHandler(this.comboBoxMarriageCounty_TextChanged);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -2109,6 +2223,120 @@
             this.tabPageResidences.TabIndex = 7;
             this.tabPageResidences.Text = "Residences";
             this.tabPageResidences.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxResidenceCounty
+            // 
+            this.comboBoxResidenceCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxResidenceCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxResidenceCounty.FormattingEnabled = true;
+            this.comboBoxResidenceCounty.Items.AddRange(new object[] {
+            "Adams",
+            "Alexander ",
+            "Bond ",
+            "Boone ",
+            "Brown ",
+            "Bureau ",
+            "Calhoun ",
+            "Carroll ",
+            "Cass ",
+            "Champaign ",
+            "Christian ",
+            "Clark ",
+            "Clay ",
+            "Clinton ",
+            "Coles ",
+            "Cook ",
+            "Crawford ",
+            "Cumberland ",
+            "DeKalb ",
+            "DeWitt ",
+            "Douglas ",
+            "DuPage ",
+            "Edgar ",
+            "Edwards ",
+            "Effingham ",
+            "Fayette ",
+            "Ford ",
+            "Franklin ",
+            "Fulton ",
+            "Gallatin ",
+            "Greene ",
+            "Grundy ",
+            "Hamilton ",
+            "Hancock ",
+            "Hardin ",
+            "Henderson ",
+            "Henry ",
+            "Iroquois ",
+            "Jackson ",
+            "Jasper ",
+            "Jefferson ",
+            "Jersey ",
+            "Jo Daviess ",
+            "Johnson ",
+            "Kane ",
+            "Kankakee ",
+            "Kendall ",
+            "Knox ",
+            "Lake ",
+            "LaSalle ",
+            "Lawrence ",
+            "Lee ",
+            "Livingston ",
+            "Logan ",
+            "Macon ",
+            "Macoupin ",
+            "Madison ",
+            "Marion ",
+            "Marshall ",
+            "Mason ",
+            "Massac ",
+            "McDonough ",
+            "McHenry ",
+            "McLean ",
+            "Menard ",
+            "Mercer ",
+            "Monroe ",
+            "Montgomery ",
+            "Morgan ",
+            "Moultrie ",
+            "Ogle ",
+            "Peoria ",
+            "Perry ",
+            "Piatt ",
+            "Pike ",
+            "Pope ",
+            "Pulaski ",
+            "Putnam ",
+            "Randolph ",
+            "Richland ",
+            "Rock Island ",
+            "Saline ",
+            "Sangamon ",
+            "Schuyler ",
+            "Scott ",
+            "Shelby ",
+            "St. Clair ",
+            "Stark ",
+            "Stephenson ",
+            "Tazewell ",
+            "Union ",
+            "Vermilion ",
+            "Wabash ",
+            "Warren ",
+            "Washington ",
+            "Wayne ",
+            "White ",
+            "Whiteside ",
+            "Will ",
+            "Williamson ",
+            "Winnebago ",
+            "Woodford"});
+            this.comboBoxResidenceCounty.Location = new System.Drawing.Point(417, 32);
+            this.comboBoxResidenceCounty.Name = "comboBoxResidenceCounty";
+            this.comboBoxResidenceCounty.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxResidenceCounty.TabIndex = 73;
+            this.comboBoxResidenceCounty.TextChanged += new System.EventHandler(this.comboBoxResidenceCounty_TextChanged);
             // 
             // label22
             // 
@@ -2950,6 +3178,25 @@
             this.textBoxSources.Size = new System.Drawing.Size(649, 296);
             this.textBoxSources.TabIndex = 29;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.textBoxResidenceAddedText);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(663, 307);
+            this.tabPage1.TabIndex = 10;
+            this.tabPage1.Text = "Residence Text";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxResidenceAddedText
+            // 
+            this.textBoxResidenceAddedText.Location = new System.Drawing.Point(7, 4);
+            this.textBoxResidenceAddedText.Multiline = true;
+            this.textBoxResidenceAddedText.Name = "textBoxResidenceAddedText";
+            this.textBoxResidenceAddedText.Size = new System.Drawing.Size(650, 297);
+            this.textBoxResidenceAddedText.TabIndex = 0;
+            // 
             // textBoxCemetery
             // 
             this.textBoxCemetery.Location = new System.Drawing.Point(113, 185);
@@ -3001,25 +3248,6 @@
             this.labelName.Size = new System.Drawing.Size(38, 13);
             this.labelName.TabIndex = 66;
             this.labelName.Text = "Name:";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.textBoxResidenceAddedText);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(663, 307);
-            this.tabPage1.TabIndex = 10;
-            this.tabPage1.Text = "Residence Text";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // textBoxResidenceAddedText
-            // 
-            this.textBoxResidenceAddedText.Location = new System.Drawing.Point(7, 4);
-            this.textBoxResidenceAddedText.Multiline = true;
-            this.textBoxResidenceAddedText.Name = "textBoxResidenceAddedText";
-            this.textBoxResidenceAddedText.Size = new System.Drawing.Size(650, 297);
-            this.textBoxResidenceAddedText.TabIndex = 0;
             // 
             // comboBoxBirthCounty
             // 
@@ -3133,6 +3361,7 @@
             this.comboBoxBirthCounty.Name = "comboBoxBirthCounty";
             this.comboBoxBirthCounty.Size = new System.Drawing.Size(229, 21);
             this.comboBoxBirthCounty.TabIndex = 113;
+            this.comboBoxBirthCounty.TextChanged += new System.EventHandler(this.comboBoxBirthCounty_TextChanged);
             // 
             // comboBoxDeathCounty
             // 
@@ -3246,6 +3475,7 @@
             this.comboBoxDeathCounty.Name = "comboBoxDeathCounty";
             this.comboBoxDeathCounty.Size = new System.Drawing.Size(229, 21);
             this.comboBoxDeathCounty.TabIndex = 114;
+            this.comboBoxDeathCounty.TextChanged += new System.EventHandler(this.comboBoxDeathCounty_TextChanged);
             // 
             // comboBoxCemeteryCounty
             // 
@@ -3359,232 +3589,7 @@
             this.comboBoxCemeteryCounty.Name = "comboBoxCemeteryCounty";
             this.comboBoxCemeteryCounty.Size = new System.Drawing.Size(102, 21);
             this.comboBoxCemeteryCounty.TabIndex = 115;
-            // 
-            // comboBoxResidenceCounty
-            // 
-            this.comboBoxResidenceCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxResidenceCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxResidenceCounty.FormattingEnabled = true;
-            this.comboBoxResidenceCounty.Items.AddRange(new object[] {
-            "Adams",
-            "Alexander ",
-            "Bond ",
-            "Boone ",
-            "Brown ",
-            "Bureau ",
-            "Calhoun ",
-            "Carroll ",
-            "Cass ",
-            "Champaign ",
-            "Christian ",
-            "Clark ",
-            "Clay ",
-            "Clinton ",
-            "Coles ",
-            "Cook ",
-            "Crawford ",
-            "Cumberland ",
-            "DeKalb ",
-            "DeWitt ",
-            "Douglas ",
-            "DuPage ",
-            "Edgar ",
-            "Edwards ",
-            "Effingham ",
-            "Fayette ",
-            "Ford ",
-            "Franklin ",
-            "Fulton ",
-            "Gallatin ",
-            "Greene ",
-            "Grundy ",
-            "Hamilton ",
-            "Hancock ",
-            "Hardin ",
-            "Henderson ",
-            "Henry ",
-            "Iroquois ",
-            "Jackson ",
-            "Jasper ",
-            "Jefferson ",
-            "Jersey ",
-            "Jo Daviess ",
-            "Johnson ",
-            "Kane ",
-            "Kankakee ",
-            "Kendall ",
-            "Knox ",
-            "Lake ",
-            "LaSalle ",
-            "Lawrence ",
-            "Lee ",
-            "Livingston ",
-            "Logan ",
-            "Macon ",
-            "Macoupin ",
-            "Madison ",
-            "Marion ",
-            "Marshall ",
-            "Mason ",
-            "Massac ",
-            "McDonough ",
-            "McHenry ",
-            "McLean ",
-            "Menard ",
-            "Mercer ",
-            "Monroe ",
-            "Montgomery ",
-            "Morgan ",
-            "Moultrie ",
-            "Ogle ",
-            "Peoria ",
-            "Perry ",
-            "Piatt ",
-            "Pike ",
-            "Pope ",
-            "Pulaski ",
-            "Putnam ",
-            "Randolph ",
-            "Richland ",
-            "Rock Island ",
-            "Saline ",
-            "Sangamon ",
-            "Schuyler ",
-            "Scott ",
-            "Shelby ",
-            "St. Clair ",
-            "Stark ",
-            "Stephenson ",
-            "Tazewell ",
-            "Union ",
-            "Vermilion ",
-            "Wabash ",
-            "Warren ",
-            "Washington ",
-            "Wayne ",
-            "White ",
-            "Whiteside ",
-            "Will ",
-            "Williamson ",
-            "Winnebago ",
-            "Woodford"});
-            this.comboBoxResidenceCounty.Location = new System.Drawing.Point(417, 32);
-            this.comboBoxResidenceCounty.Name = "comboBoxResidenceCounty";
-            this.comboBoxResidenceCounty.Size = new System.Drawing.Size(229, 21);
-            this.comboBoxResidenceCounty.TabIndex = 73;
-            // 
-            // comboBoxMarriageCounty
-            // 
-            this.comboBoxMarriageCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxMarriageCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMarriageCounty.FormattingEnabled = true;
-            this.comboBoxMarriageCounty.Items.AddRange(new object[] {
-            "Adams",
-            "Alexander ",
-            "Bond ",
-            "Boone ",
-            "Brown ",
-            "Bureau ",
-            "Calhoun ",
-            "Carroll ",
-            "Cass ",
-            "Champaign ",
-            "Christian ",
-            "Clark ",
-            "Clay ",
-            "Clinton ",
-            "Coles ",
-            "Cook ",
-            "Crawford ",
-            "Cumberland ",
-            "DeKalb ",
-            "DeWitt ",
-            "Douglas ",
-            "DuPage ",
-            "Edgar ",
-            "Edwards ",
-            "Effingham ",
-            "Fayette ",
-            "Ford ",
-            "Franklin ",
-            "Fulton ",
-            "Gallatin ",
-            "Greene ",
-            "Grundy ",
-            "Hamilton ",
-            "Hancock ",
-            "Hardin ",
-            "Henderson ",
-            "Henry ",
-            "Iroquois ",
-            "Jackson ",
-            "Jasper ",
-            "Jefferson ",
-            "Jersey ",
-            "Jo Daviess ",
-            "Johnson ",
-            "Kane ",
-            "Kankakee ",
-            "Kendall ",
-            "Knox ",
-            "Lake ",
-            "LaSalle ",
-            "Lawrence ",
-            "Lee ",
-            "Livingston ",
-            "Logan ",
-            "Macon ",
-            "Macoupin ",
-            "Madison ",
-            "Marion ",
-            "Marshall ",
-            "Mason ",
-            "Massac ",
-            "McDonough ",
-            "McHenry ",
-            "McLean ",
-            "Menard ",
-            "Mercer ",
-            "Monroe ",
-            "Montgomery ",
-            "Morgan ",
-            "Moultrie ",
-            "Ogle ",
-            "Peoria ",
-            "Perry ",
-            "Piatt ",
-            "Pike ",
-            "Pope ",
-            "Pulaski ",
-            "Putnam ",
-            "Randolph ",
-            "Richland ",
-            "Rock Island ",
-            "Saline ",
-            "Sangamon ",
-            "Schuyler ",
-            "Scott ",
-            "Shelby ",
-            "St. Clair ",
-            "Stark ",
-            "Stephenson ",
-            "Tazewell ",
-            "Union ",
-            "Vermilion ",
-            "Wabash ",
-            "Warren ",
-            "Washington ",
-            "Wayne ",
-            "White ",
-            "Whiteside ",
-            "Will ",
-            "Williamson ",
-            "Winnebago ",
-            "Woodford"});
-            this.comboBoxMarriageCounty.Location = new System.Drawing.Point(436, 163);
-            this.comboBoxMarriageCounty.Name = "comboBoxMarriageCounty";
-            this.comboBoxMarriageCounty.Size = new System.Drawing.Size(210, 21);
-            this.comboBoxMarriageCounty.TabIndex = 70;
+            this.comboBoxCemeteryCounty.TextChanged += new System.EventHandler(this.comboBoxCemeteryCounty_TextChanged);
             // 
             // SearchForm
             // 

@@ -773,7 +773,7 @@ namespace Soldiers
             else buttonAddResidence.Enabled = true;
         }
 
-        private void textBoxResidenceCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxResidenceCounty_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxResidenceCounty.Text.Contains("County") || comboBoxResidenceCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
@@ -858,25 +858,25 @@ namespace Soldiers
             else buttonAddResidence.Enabled = true;
         }
 
-        private void textBoxBirthCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxBirthCounty_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxBirthCounty.Text.Contains("County") || comboBoxBirthCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
         }
 
-        private void textBoxDeathCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxDeathCounty_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxDeathCounty.Text.Contains("County") || comboBoxDeathCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
         }
 
-        private void textBoxCemeteryCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxCemeteryCounty_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxCemeteryCounty.Text.Contains("County") || comboBoxCemeteryCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
         }
 
-        private void textBoxMarriageCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxMarriageCounty_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxMarriageCounty.Text.Contains("County") || comboBoxMarriageCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
@@ -1299,6 +1299,16 @@ namespace Soldiers
                 return 12;
             return 0;
         }
+
+
+
+
+
+
+
+
+
+
 
  
     }
