@@ -101,10 +101,10 @@ namespace Soldiers
                 newSoldier.cemeteryLongitude = reader["c_longitude"].ToString();
                 newSoldier.cemeteryLocation.city = reader["c_loc_city"].ToString();
                 newSoldier.cemeteryLocation.county = reader["c_loc_county"].ToString();
-                newSoldier.cemeteryLocation.state = "Illinois";
-                //newSoldier.cemeteryLocation.state = reader["c_loc_state"].ToString();
-                newSoldier.cemeteryLocation.country = "USA";
-                //newSoldier.cemeteryLocation.country = reader["c_loc_country"].ToString();
+                //newSoldier.cemeteryLocation.state = "Illinois";
+                newSoldier.cemeteryLocation.state = reader["c_loc_state"].ToString();
+                //newSoldier.cemeteryLocation.country = "USA";
+                newSoldier.cemeteryLocation.country = reader["c_loc_country"].ToString();
 
                 //read spouses
                 string readSpouses = String.Format("select * from spouses where soldier_id={0};", newSoldier.id.ToString());
@@ -201,6 +201,7 @@ namespace Soldiers
                 }
 
                 newSoldier.serviceAddedText = reader["service_text"].ToString();
+                newSoldier.residenceAddedText = reader["residence_text"].ToString();
                 newSoldier.markerText = reader["marker_text"].ToString();
                 newSoldier.pensionNumber = reader["pension_number"].ToString();
                 newSoldier.pensionText = reader["pension_text"].ToString();
@@ -219,6 +220,7 @@ namespace Soldiers
         //PRE: Soldier must have unique id
         public void addSoldier(Soldier soldierToAdd)
         {
+            /*
             string sql = string.Format("insert into soldiers (id, f_name, mid_name, l_name, maid_name, b_date_month, b_date_day, b_date_year, b_loc_city, b_loc_county, b_loc_state, b_loc_country, d_date_month, d_date_day, d_date_year, d_loc_city, d_loc_county, d_loc_state, d_loc_country, c_name, c_latitude, c_longitude, c_loc_city, c_loc_county, marker_text, pension_text, pension_number, sources, added_text, service_text) values ({0}, '{1}', '{2}', '{3}', '{4}', {5}, {6}, {7}, '{8}', '{9}', '{10}', '{11}', {12}, {13}, {14}, '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}');",
                 soldierToAdd.id.ToString(), soldierToAdd.soldierName.first, soldierToAdd.soldierName.middle, soldierToAdd.soldierName.last, soldierToAdd.soldierName.maiden,
                 soldierToAdd.birthDate.month.ToString(), soldierToAdd.birthDate.day.ToString(), soldierToAdd.birthDate.year.ToString(),
@@ -229,19 +231,19 @@ namespace Soldiers
                 soldierToAdd.markerText, soldierToAdd.pensionText, soldierToAdd.pensionNumber, soldierToAdd.sources, soldierToAdd.addedText, soldierToAdd.serviceAddedText);
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
-
-            /*
-            string sql = string.Format("insert into soldiers (id, f_name, mid_name, l_name, maid_name, b_date_month, b_date_day, b_date_year, b_loc_city, b_loc_county, b_loc_state, b_loc_country, d_date_month, d_date_day, d_date_year, d_loc_city, d_loc_county, d_loc_state, d_loc_country, c_name, c_latitude, c_longitude, c_loc_city, c_loc_county, c_loc_state, c_loc_country, marker_text, pension_text, pension_number, sources, added_text, service_text) values ({0}, '{1}', '{2}', '{3}', '{4}', {5}, {6}, {7}, '{8}', '{9}', '{10}', '{11}', {12}, {13}, {14}, '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}');",
+            */
+            
+            string sql = string.Format("insert into soldiers (id, f_name, mid_name, l_name, maid_name, b_date_month, b_date_day, b_date_year, b_loc_city, b_loc_county, b_loc_state, b_loc_country, d_date_month, d_date_day, d_date_year, d_loc_city, d_loc_county, d_loc_state, d_loc_country, c_name, c_latitude, c_longitude, c_loc_city, c_loc_county, c_loc_state, c_loc_country, marker_text, pension_text, pension_number, sources, added_text, service_text, residence_text) values ({0}, '{1}', '{2}', '{3}', '{4}', {5}, {6}, {7}, '{8}', '{9}', '{10}', '{11}', {12}, {13}, {14}, '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}');",
                 soldierToAdd.id.ToString(), soldierToAdd.soldierName.first, soldierToAdd.soldierName.middle, soldierToAdd.soldierName.last, soldierToAdd.soldierName.maiden,
                 soldierToAdd.birthDate.month.ToString(), soldierToAdd.birthDate.day.ToString(), soldierToAdd.birthDate.year.ToString(),
                 soldierToAdd.birthLocation.city, soldierToAdd.birthLocation.county, soldierToAdd.birthLocation.state, soldierToAdd.birthLocation.country,
                 soldierToAdd.deathDate.month.ToString(), soldierToAdd.deathDate.day.ToString(), soldierToAdd.deathDate.year.ToString(),
                 soldierToAdd.deathLocation.city, soldierToAdd.deathLocation.county, soldierToAdd.deathLocation.state, soldierToAdd.deathLocation.country,
                 soldierToAdd.cemetery, soldierToAdd.cemeteryLatitude, soldierToAdd.cemeteryLongitude, soldierToAdd.cemeteryLocation.city, soldierToAdd.cemeteryLocation.county, soldierToAdd.cemeteryLocation.state, soldierToAdd.cemeteryLocation.country,
-                soldierToAdd.markerText, soldierToAdd.pensionText, soldierToAdd.pensionNumber, soldierToAdd.sources, soldierToAdd.addedText, soldierToAdd.serviceAddedText);
+                soldierToAdd.markerText, soldierToAdd.pensionText, soldierToAdd.pensionNumber, soldierToAdd.sources, soldierToAdd.addedText, soldierToAdd.serviceAddedText, soldierToAdd.residenceAddedText);
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
-             */
+             
 
         }
 

@@ -38,7 +38,6 @@
             this.menuStripItemCreateDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripView = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripViewSoldierList = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStripItemAdvancedSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDetails = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.labelFilter = new System.Windows.Forms.Label();
             this.buttonSubmitToMaster = new System.Windows.Forms.Button();
             this.buttonCreateDuplicate = new System.Windows.Forms.Button();
+            this.menuStripItemAdvancedSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,7 @@
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.menuStripView,
+            this.menuStripItemAdvancedSearch,
             this.menuStripHelp});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
@@ -120,8 +121,7 @@
             // menuStripView
             // 
             this.menuStripView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuStripViewSoldierList,
-            this.menuStripItemAdvancedSearch});
+            this.menuStripViewSoldierList});
             this.menuStripView.Name = "menuStripView";
             this.menuStripView.Size = new System.Drawing.Size(44, 20);
             this.menuStripView.Text = "View";
@@ -129,16 +129,9 @@
             // menuStripViewSoldierList
             // 
             this.menuStripViewSoldierList.Name = "menuStripViewSoldierList";
-            this.menuStripViewSoldierList.Size = new System.Drawing.Size(165, 22);
+            this.menuStripViewSoldierList.Size = new System.Drawing.Size(152, 22);
             this.menuStripViewSoldierList.Text = "Soldier List";
             this.menuStripViewSoldierList.Click += new System.EventHandler(this.menuStripViewSoldierList_Click);
-            // 
-            // menuStripItemAdvancedSearch
-            // 
-            this.menuStripItemAdvancedSearch.Name = "menuStripItemAdvancedSearch";
-            this.menuStripItemAdvancedSearch.Size = new System.Drawing.Size(165, 22);
-            this.menuStripItemAdvancedSearch.Text = "Advanced Search";
-            this.menuStripItemAdvancedSearch.Click += new System.EventHandler(this.menuStripItemAdvancedSearch_Click);
             // 
             // menuStripHelp
             // 
@@ -151,7 +144,7 @@
             // menuStripItemAbout
             // 
             this.menuStripItemAbout.Name = "menuStripItemAbout";
-            this.menuStripItemAbout.Size = new System.Drawing.Size(107, 22);
+            this.menuStripItemAbout.Size = new System.Drawing.Size(152, 22);
             this.menuStripItemAbout.Text = "About";
             this.menuStripItemAbout.Click += new System.EventHandler(this.menuStripItemAbout_Click);
             // 
@@ -227,6 +220,13 @@
             this.buttonCreateDuplicate.Text = "Create Duplicate";
             this.buttonCreateDuplicate.UseVisualStyleBackColor = true;
             this.buttonCreateDuplicate.Click += new System.EventHandler(this.buttonCreateDuplicate_Click);
+            // 
+            // menuStripItemAdvancedSearch
+            // 
+            this.menuStripItemAdvancedSearch.Name = "menuStripItemAdvancedSearch";
+            this.menuStripItemAdvancedSearch.Size = new System.Drawing.Size(110, 20);
+            this.menuStripItemAdvancedSearch.Text = "Advanced Search";
+            this.menuStripItemAdvancedSearch.Click += new System.EventHandler(this.menuStripItemAdvancedSearch_Click);
             // 
             // SoldiersForm
             // 

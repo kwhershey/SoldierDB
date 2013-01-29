@@ -26,6 +26,7 @@ namespace Soldiers
         public List<String> serviceTroops = new List<string>();
         public List<String> serviceSuperiors = new List<string>();
         public String serviceAddedText;
+        public String residenceAddedText;
         public String markerText;
         public String pensionNumber;
         public String pensionText;
@@ -37,7 +38,7 @@ namespace Soldiers
         }
 
         public Soldier(name n, date bd, location bl, date dd, location dl, String c, String cLat, String cLong, location cl, List<spouse> sps, List<child> cld, List<residence> r, List<String> sp, List<String> st, List<String> swu,
-            String sat, String mt, String pn, String pt, String src, String at)
+            String sat, String rat, String mt, String pn, String pt, String src, String at)
         {
             soldierName = n;
             birthDate = bd;
@@ -55,6 +56,7 @@ namespace Soldiers
             serviceTroops = st;
             serviceSuperiors = swu;
             serviceAddedText = sat;
+            residenceAddedText = rat;
             markerText = mt;
             pensionNumber = pn;
             pensionText = pt;

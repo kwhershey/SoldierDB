@@ -144,24 +144,25 @@ namespace Soldiers
             comboBoxBirthMonth.SelectedIndex = detailsSoldier.birthDate.month;
             comboBoxBirthYear.SelectedItem = detailsSoldier.birthDate.year.ToString();
             textBoxBirthCity.Text = detailsSoldier.birthLocation.city;
-            textBoxBirthCounty.Text = detailsSoldier.birthLocation.county;
+            comboBoxBirthCounty.Text = detailsSoldier.birthLocation.county;
             textBoxBirthState.Text = detailsSoldier.birthLocation.state;
             textBoxBirthCountry.Text = detailsSoldier.birthLocation.country;
             comboBoxDeathDay.SelectedIndex = detailsSoldier.deathDate.day;
             comboBoxDeathMonth.SelectedIndex = detailsSoldier.deathDate.month;
             comboBoxDeathYear.SelectedItem = detailsSoldier.deathDate.year.ToString();
             textBoxDeathCity.Text = detailsSoldier.deathLocation.city;
-            textBoxDeathCounty.Text = detailsSoldier.deathLocation.county;
+            comboBoxDeathCounty.Text = detailsSoldier.deathLocation.county;
             textBoxDeathState.Text = detailsSoldier.deathLocation.state;
             textBoxDeathCountry.Text = detailsSoldier.deathLocation.country;
             textBoxCemetery.Text = detailsSoldier.cemetery;
             textBoxLatitude.Text = detailsSoldier.cemeteryLatitude;
             textBoxLongitude.Text = detailsSoldier.cemeteryLongitude;
             textBoxCemeteryCity.Text = detailsSoldier.cemeteryLocation.city;
-            textBoxCemeteryCounty.Text = detailsSoldier.cemeteryLocation.county;
+            comboBoxCemeteryCounty.Text = detailsSoldier.cemeteryLocation.county;
             textBoxCemeteryState.Text = detailsSoldier.cemeteryLocation.state;
             textBoxCemeteryCountry.Text = detailsSoldier.cemeteryLocation.country;
             textBoxService.Text = detailsSoldier.serviceAddedText;
+            textBoxResidenceText.Text = detailsSoldier.residenceAddedText;
             textBoxMarker.Text = detailsSoldier.markerText;
             textBoxPension.Text = detailsSoldier.pensionNumber;
             textBoxPensionDetails.Text = detailsSoldier.pensionText;
@@ -227,6 +228,7 @@ namespace Soldiers
         public void loadDefaultInfo()
         {
             textBoxBirthCountry.Text = "USA";
+            textBoxCemeteryState.Text = "Illinois";
             textBoxCemeteryCountry.Text = "USA";
             textBoxDeathCountry.Text = "USA";
             textBoxDeathState.Text = "Illinois";
@@ -261,24 +263,25 @@ namespace Soldiers
             detailsSoldier.birthDate.month = comboMonthtoInt(comboBoxBirthMonth);
             detailsSoldier.birthDate.year = comboYeartoInt(comboBoxBirthYear);
             detailsSoldier.birthLocation.city = textBoxBirthCity.Text;
-            detailsSoldier.birthLocation.county = textBoxBirthCounty.Text;
+            detailsSoldier.birthLocation.county = comboBoxBirthCounty.Text;
             detailsSoldier.birthLocation.state = textBoxBirthState.Text;
             detailsSoldier.birthLocation.country = textBoxBirthCountry.Text;
             detailsSoldier.deathDate.day = comboDaytoInt(comboBoxDeathDay);
             detailsSoldier.deathDate.month = comboMonthtoInt(comboBoxDeathMonth);
             detailsSoldier.deathDate.year = comboYeartoInt(comboBoxDeathYear);
             detailsSoldier.deathLocation.city = textBoxDeathCity.Text;
-            detailsSoldier.deathLocation.county = textBoxDeathCounty.Text;
+            detailsSoldier.deathLocation.county = comboBoxDeathCounty.Text;
             detailsSoldier.deathLocation.state = textBoxDeathState.Text;
             detailsSoldier.deathLocation.country = textBoxDeathCountry.Text;
             detailsSoldier.cemetery = textBoxCemetery.Text;
             detailsSoldier.cemeteryLatitude = textBoxLatitude.Text;
             detailsSoldier.cemeteryLongitude = textBoxLongitude.Text;
             detailsSoldier.cemeteryLocation.city = textBoxCemeteryCity.Text;
-            detailsSoldier.cemeteryLocation.county = textBoxCemeteryCounty.Text;
+            detailsSoldier.cemeteryLocation.county = comboBoxCemeteryCounty.Text;
             detailsSoldier.cemeteryLocation.state = textBoxCemeteryState.Text;
             detailsSoldier.cemeteryLocation.country = textBoxCemeteryCountry.Text;
             detailsSoldier.serviceAddedText = textBoxService.Text;
+            detailsSoldier.residenceAddedText = textBoxResidenceText.Text;
 
             List<String> newPositionList = new List<String>();
             foreach (ListViewItem lvi in listViewPositions.Items)
@@ -459,7 +462,7 @@ namespace Soldiers
             newSpouse.marriageDate.month = comboMonthtoInt(comboBoxMarriageMonth);
             newSpouse.marriageDate.year = comboYeartoInt(comboBoxMarriageYear);
             newSpouse.marriageLocation.city = textBoxMarriageCity.Text;
-            newSpouse.marriageLocation.county = textBoxMarriageCounty.Text;
+            newSpouse.marriageLocation.county = comboBoxMarriageCounty.Text;
             newSpouse.marriageLocation.state = textBoxMarriageState.Text;
             newSpouse.marriageLocation.country = textBoxMarriageCountry.Text;
 
@@ -475,7 +478,7 @@ namespace Soldiers
             textBoxSpouseMaidenName.Clear();
             textBoxMarriageCity.Clear();
             textBoxMarriageCountry.Clear();
-            textBoxMarriageCounty.Clear();
+            comboBoxMarriageCounty.Text="";  
             textBoxMarriageState.Clear();
             comboBoxMarriageDay.SelectedIndex = 0;
             comboBoxMarriageMonth.SelectedIndex = 0;
@@ -516,7 +519,7 @@ namespace Soldiers
         {
             residence newResidence = new residence();
             newResidence.place.city = textBoxResidenceCity.Text;
-            newResidence.place.county = textBoxResidenceCounty.Text;
+            newResidence.place.county = comboBoxResidenceCounty.Text;
             newResidence.place.state = textBoxResidenceState.Text;
             newResidence.place.country = textBoxResidenceCountry.Text;
             newResidence.moveInDate.day = comboDaytoInt(comboBoxMoveInDay);
@@ -534,7 +537,7 @@ namespace Soldiers
             //clear
             textBoxResidenceCity.Clear();
             textBoxResidenceCountry.Clear();
-            textBoxResidenceCounty.Clear();
+            comboBoxResidenceCounty.Text="";
             textBoxResidenceState.Clear();
             comboBoxMoveInDay.SelectedIndex = 0;
             comboBoxMoveInMonth.SelectedIndex = 0;
@@ -589,7 +592,7 @@ namespace Soldiers
             textBoxSpouseMaidenName.Clear();
             textBoxMarriageCity.Clear();
             textBoxMarriageCountry.Clear();
-            textBoxMarriageCounty.Clear();
+            comboBoxMarriageCounty.Text="";
             textBoxMarriageState.Clear();
             comboBoxMarriageDay.SelectedIndex = 0;
             comboBoxMarriageMonth.SelectedIndex = 0;
@@ -617,7 +620,7 @@ namespace Soldiers
             //clear
             textBoxResidenceCity.Clear();
             textBoxResidenceCountry.Clear();
-            textBoxResidenceCounty.Clear();
+            comboBoxResidenceCounty.Text="";
             textBoxResidenceState.Clear();
             comboBoxMoveInDay.SelectedIndex = 0;
             comboBoxMoveInMonth.SelectedIndex = 0;
@@ -718,18 +721,18 @@ namespace Soldiers
 
         private void textBoxResidenceCity_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxResidenceCity.Text == "" && textBoxResidenceCounty.Text == ""
+            if (textBoxResidenceCity.Text == "" && comboBoxResidenceCounty.Text == ""
                 && textBoxResidenceState.Text == "" && textBoxResidenceCountry.Text == "")
                 buttonAddResidence.Enabled = false;
             else buttonAddResidence.Enabled = true;
         }
 
-        private void textBoxResidenceCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxResidenceCounty_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxResidenceCounty.Text.Contains("County") || textBoxResidenceCounty.Text.Contains("county"))
+            if (comboBoxResidenceCounty.Text.Contains("County") || comboBoxResidenceCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
-            
-            if (textBoxResidenceCity.Text == "" && textBoxResidenceCounty.Text == ""
+
+            if (textBoxResidenceCity.Text == "" && comboBoxResidenceCounty.Text == ""
                 && textBoxResidenceState.Text == "" && textBoxResidenceCountry.Text == "")
                 buttonAddResidence.Enabled = false;
             else buttonAddResidence.Enabled = true;
@@ -794,8 +797,8 @@ namespace Soldiers
             {
                 MessageBox.Show("Please use full spelling of states");
             }
-            
-            if (textBoxResidenceCity.Text == "" && textBoxResidenceCounty.Text == ""
+
+            if (textBoxResidenceCity.Text == "" && comboBoxResidenceCounty.Text == ""
                 && textBoxResidenceState.Text == "" && textBoxResidenceCountry.Text == "")
                 buttonAddResidence.Enabled = false;
             else buttonAddResidence.Enabled = true;
@@ -803,33 +806,33 @@ namespace Soldiers
 
         private void textBoxResidenceCountry_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxResidenceCity.Text == "" && textBoxResidenceCounty.Text == ""
+            if (textBoxResidenceCity.Text == "" && comboBoxResidenceCounty.Text == ""
                 && textBoxResidenceState.Text == "" && textBoxResidenceCountry.Text == "")
                 buttonAddResidence.Enabled = false;
             else buttonAddResidence.Enabled = true;
         }
 
-        private void textBoxBirthCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxBirthCounty_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxBirthCounty.Text.Contains("County") || textBoxBirthCounty.Text.Contains("county"))
+            if (comboBoxBirthCounty.Text.Contains("County") || comboBoxBirthCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
         }
 
-        private void textBoxDeathCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxDeathCounty_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxDeathCounty.Text.Contains("County") || textBoxDeathCounty.Text.Contains("county"))
+            if (comboBoxDeathCounty.Text.Contains("County") || comboBoxDeathCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
         }
 
-        private void textBoxCemeteryCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxCemeteryCounty_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxCemeteryCounty.Text.Contains("County") || textBoxCemeteryCounty.Text.Contains("county"))
+            if (comboBoxCemeteryCounty.Text.Contains("County") || comboBoxCemeteryCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
         }
 
-        private void textBoxMarriageCounty_TextChanged(object sender, EventArgs e)
+        private void comboBoxMarriageCounty_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxMarriageCounty.Text.Contains("County") || textBoxMarriageCounty.Text.Contains("county"))
+            if (comboBoxMarriageCounty.Text.Contains("County") || comboBoxMarriageCounty.Text.Contains("county"))
                 MessageBox.Show("Please exclude the word \"County\"");
         }
 
@@ -1101,7 +1104,7 @@ namespace Soldiers
                 comboBoxMarriageMonth.SelectedIndex = ((spouse)listViewSpouses.SelectedItems[0].Tag).marriageDate.month;
                 comboBoxMarriageYear.SelectedItem = ((spouse)listViewSpouses.SelectedItems[0].Tag).marriageDate.year.ToString();
                 textBoxMarriageCity.Text = ((spouse)listViewSpouses.SelectedItems[0].Tag).marriageLocation.city;
-                textBoxMarriageCounty.Text = ((spouse)listViewSpouses.SelectedItems[0].Tag).marriageLocation.county;
+                comboBoxMarriageCounty.Text = ((spouse)listViewSpouses.SelectedItems[0].Tag).marriageLocation.county;
                 textBoxMarriageState.Text = ((spouse)listViewSpouses.SelectedItems[0].Tag).marriageLocation.state;
                 textBoxMarriageCountry.Text = ((spouse)listViewSpouses.SelectedItems[0].Tag).marriageLocation.country;
             }
@@ -1118,7 +1121,7 @@ namespace Soldiers
                 comboBoxMarriageMonth.SelectedIndex = 0;
                 comboBoxMarriageYear.SelectedItem = 0;
                 textBoxMarriageCity.Text = "";
-                textBoxMarriageCounty.Text = "";
+                comboBoxMarriageCounty.Text = "";
                 textBoxMarriageState.Text = "";
                 textBoxMarriageCountry.Text = "";
             }
@@ -1170,7 +1173,7 @@ namespace Soldiers
 
                 //load info
                 textBoxResidenceCity.Text = ((residence)listViewResidences.SelectedItems[0].Tag).place.city;
-                textBoxResidenceCounty.Text = ((residence)listViewResidences.SelectedItems[0].Tag).place.county;
+                comboBoxResidenceCounty.Text = ((residence)listViewResidences.SelectedItems[0].Tag).place.county;
                 textBoxResidenceState.Text = ((residence)listViewResidences.SelectedItems[0].Tag).place.state;
                 textBoxResidenceCountry.Text = ((residence)listViewResidences.SelectedItems[0].Tag).place.country;
                 comboBoxMoveInDay.SelectedItem = ((residence)listViewResidences.SelectedItems[0].Tag).moveInDate.day;
@@ -1187,7 +1190,7 @@ namespace Soldiers
 
                 //load info
                 textBoxResidenceCity.Text = "";
-                textBoxResidenceCounty.Text = "";
+                comboBoxResidenceCounty.Text = "";
                 textBoxResidenceState.Text = "";
                 textBoxResidenceCountry.Text = "";
                 comboBoxMoveInDay.SelectedItem = 0;
@@ -1259,6 +1262,15 @@ namespace Soldiers
                 return 12;
             return 0;
         }
+
+
+
+
+
+
+
+
+
 
  
 

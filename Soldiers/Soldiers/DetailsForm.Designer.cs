@@ -43,9 +43,7 @@
             this.textBoxSoldierFirstName = new System.Windows.Forms.TextBox();
             this.textBoxCemetery = new System.Windows.Forms.TextBox();
             this.textBoxMarriageCity = new System.Windows.Forms.TextBox();
-            this.tabControlInfo = new System.Windows.Forms.TabControl();
-            this.tabPageServiceText = new System.Windows.Forms.TabPage();
-            this.textBoxService = new System.Windows.Forms.TextBox();
+            this.tab = new System.Windows.Forms.TabControl();
             this.tabPageServiceInfo = new System.Windows.Forms.TabPage();
             this.textBoxSuperior = new System.Windows.Forms.TextBox();
             this.textBoxTroop = new System.Windows.Forms.TextBox();
@@ -59,11 +57,14 @@
             this.buttonRemovePosition = new System.Windows.Forms.Button();
             this.buttonUpdatePosition = new System.Windows.Forms.Button();
             this.buttonAddPosition = new System.Windows.Forms.Button();
+            this.tabPageServiceText = new System.Windows.Forms.TabPage();
+            this.textBoxService = new System.Windows.Forms.TextBox();
             this.tabPagePension = new System.Windows.Forms.TabPage();
             this.textBoxPensionDetails = new System.Windows.Forms.TextBox();
             this.labelPension = new System.Windows.Forms.Label();
             this.textBoxPension = new System.Windows.Forms.TextBox();
             this.tabPageSpouses = new System.Windows.Forms.TabPage();
+            this.comboBoxMarriageCounty = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -83,7 +84,6 @@
             this.textBoxSpouseMiddleName = new System.Windows.Forms.TextBox();
             this.textBoxSpouseFirstName = new System.Windows.Forms.TextBox();
             this.textBoxSpouseMaidenName = new System.Windows.Forms.TextBox();
-            this.textBoxMarriageCounty = new System.Windows.Forms.TextBox();
             this.textBoxMarriageState = new System.Windows.Forms.TextBox();
             this.textBoxMarriageCountry = new System.Windows.Forms.TextBox();
             this.tabPageChildren = new System.Windows.Forms.TabPage();
@@ -102,6 +102,7 @@
             this.textBoxChildMaidenName = new System.Windows.Forms.TextBox();
             this.listViewChildren = new System.Windows.Forms.ListView();
             this.tabPageResidences = new System.Windows.Forms.TabPage();
+            this.comboBoxResidenceCounty = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -111,7 +112,6 @@
             this.textBoxResidenceCountry = new System.Windows.Forms.TextBox();
             this.textBoxResidenceState = new System.Windows.Forms.TextBox();
             this.textBoxResidenceCity = new System.Windows.Forms.TextBox();
-            this.textBoxResidenceCounty = new System.Windows.Forms.TextBox();
             this.comboBoxMoveOutYear = new System.Windows.Forms.ComboBox();
             this.comboBoxMoveOutDay = new System.Windows.Forms.ComboBox();
             this.comboBoxMoveOutMonth = new System.Windows.Forms.ComboBox();
@@ -122,6 +122,7 @@
             this.buttonUpdateResidence = new System.Windows.Forms.Button();
             this.buttonAddResidence = new System.Windows.Forms.Button();
             this.listViewResidences = new System.Windows.Forms.ListView();
+            this.tabResidenceText = new System.Windows.Forms.TabPage();
             this.tabPageMarker = new System.Windows.Forms.TabPage();
             this.textBoxMarker = new System.Windows.Forms.TextBox();
             this.tabPageAdditional = new System.Windows.Forms.TabPage();
@@ -138,7 +139,6 @@
             this.comboBoxBirthYear = new System.Windows.Forms.ComboBox();
             this.textBoxDeathCountry = new System.Windows.Forms.TextBox();
             this.textBoxDeathState = new System.Windows.Forms.TextBox();
-            this.textBoxDeathCounty = new System.Windows.Forms.TextBox();
             this.comboBoxDeathYear = new System.Windows.Forms.ComboBox();
             this.comboBoxDeathDay = new System.Windows.Forms.ComboBox();
             this.comboBoxDeathMonth = new System.Windows.Forms.ComboBox();
@@ -146,12 +146,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxCemeteryCountry = new System.Windows.Forms.TextBox();
             this.textBoxCemeteryState = new System.Windows.Forms.TextBox();
-            this.textBoxCemeteryCounty = new System.Windows.Forms.TextBox();
             this.textBoxCemeteryCity = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBirthState = new System.Windows.Forms.TextBox();
             this.textBoxBirthCity = new System.Windows.Forms.TextBox();
-            this.textBoxBirthCounty = new System.Windows.Forms.TextBox();
             this.textBoxBirthCountry = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -168,13 +166,18 @@
             this.textBoxLongitude = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.tabControlInfo.SuspendLayout();
-            this.tabPageServiceText.SuspendLayout();
+            this.comboBoxCemeteryCounty = new System.Windows.Forms.ComboBox();
+            this.comboBoxBirthCounty = new System.Windows.Forms.ComboBox();
+            this.comboBoxDeathCounty = new System.Windows.Forms.ComboBox();
+            this.textBoxResidenceText = new System.Windows.Forms.TextBox();
+            this.tab.SuspendLayout();
             this.tabPageServiceInfo.SuspendLayout();
+            this.tabPageServiceText.SuspendLayout();
             this.tabPagePension.SuspendLayout();
             this.tabPageSpouses.SuspendLayout();
             this.tabPageChildren.SuspendLayout();
             this.tabPageResidences.SuspendLayout();
+            this.tabResidenceText.SuspendLayout();
             this.tabPageMarker.SuspendLayout();
             this.tabPageAdditional.SuspendLayout();
             this.tabPageSources.SuspendLayout();
@@ -302,45 +305,27 @@
             this.textBoxMarriageCity.Size = new System.Drawing.Size(210, 20);
             this.textBoxMarriageCity.TabIndex = 8;
             // 
-            // tabControlInfo
+            // tab
             // 
-            this.tabControlInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlInfo.Controls.Add(this.tabPageServiceText);
-            this.tabControlInfo.Controls.Add(this.tabPageServiceInfo);
-            this.tabControlInfo.Controls.Add(this.tabPagePension);
-            this.tabControlInfo.Controls.Add(this.tabPageSpouses);
-            this.tabControlInfo.Controls.Add(this.tabPageChildren);
-            this.tabControlInfo.Controls.Add(this.tabPageResidences);
-            this.tabControlInfo.Controls.Add(this.tabPageMarker);
-            this.tabControlInfo.Controls.Add(this.tabPageAdditional);
-            this.tabControlInfo.Controls.Add(this.tabPageSources);
-            this.tabControlInfo.Location = new System.Drawing.Point(16, 264);
-            this.tabControlInfo.Name = "tabControlInfo";
-            this.tabControlInfo.SelectedIndex = 0;
-            this.tabControlInfo.Size = new System.Drawing.Size(671, 333);
-            this.tabControlInfo.TabIndex = 28;
-            this.tabControlInfo.SelectedIndexChanged += new System.EventHandler(this.tabControlInfo_SelectedIndexChanged);
-            // 
-            // tabPageServiceText
-            // 
-            this.tabPageServiceText.Controls.Add(this.textBoxService);
-            this.tabPageServiceText.Location = new System.Drawing.Point(4, 22);
-            this.tabPageServiceText.Name = "tabPageServiceText";
-            this.tabPageServiceText.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageServiceText.Size = new System.Drawing.Size(663, 307);
-            this.tabPageServiceText.TabIndex = 0;
-            this.tabPageServiceText.Text = "Service Text";
-            this.tabPageServiceText.UseVisualStyleBackColor = true;
-            // 
-            // textBoxService
-            // 
-            this.textBoxService.Location = new System.Drawing.Point(6, 6);
-            this.textBoxService.Multiline = true;
-            this.textBoxService.Name = "textBoxService";
-            this.textBoxService.Size = new System.Drawing.Size(649, 296);
-            this.textBoxService.TabIndex = 24;
+            this.tab.Controls.Add(this.tabPageServiceInfo);
+            this.tab.Controls.Add(this.tabPageServiceText);
+            this.tab.Controls.Add(this.tabPagePension);
+            this.tab.Controls.Add(this.tabPageSpouses);
+            this.tab.Controls.Add(this.tabPageChildren);
+            this.tab.Controls.Add(this.tabPageResidences);
+            this.tab.Controls.Add(this.tabResidenceText);
+            this.tab.Controls.Add(this.tabPageMarker);
+            this.tab.Controls.Add(this.tabPageAdditional);
+            this.tab.Controls.Add(this.tabPageSources);
+            this.tab.Location = new System.Drawing.Point(16, 264);
+            this.tab.Name = "tab";
+            this.tab.SelectedIndex = 0;
+            this.tab.Size = new System.Drawing.Size(671, 333);
+            this.tab.TabIndex = 28;
+            this.tab.SelectedIndexChanged += new System.EventHandler(this.tabControlInfo_SelectedIndexChanged);
             // 
             // tabPageServiceInfo
             // 
@@ -365,7 +350,7 @@
             this.tabPageServiceInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageServiceInfo.Name = "tabPageServiceInfo";
             this.tabPageServiceInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageServiceInfo.Size = new System.Drawing.Size(661, 308);
+            this.tabPageServiceInfo.Size = new System.Drawing.Size(663, 307);
             this.tabPageServiceInfo.TabIndex = 8;
             this.tabPageServiceInfo.Text = "Service Info";
             this.tabPageServiceInfo.UseVisualStyleBackColor = true;
@@ -484,6 +469,25 @@
             this.buttonAddPosition.UseVisualStyleBackColor = true;
             this.buttonAddPosition.Click += new System.EventHandler(this.buttonAddPosition_Click);
             // 
+            // tabPageServiceText
+            // 
+            this.tabPageServiceText.Controls.Add(this.textBoxService);
+            this.tabPageServiceText.Location = new System.Drawing.Point(4, 22);
+            this.tabPageServiceText.Name = "tabPageServiceText";
+            this.tabPageServiceText.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageServiceText.Size = new System.Drawing.Size(663, 307);
+            this.tabPageServiceText.TabIndex = 0;
+            this.tabPageServiceText.Text = "Service Text";
+            this.tabPageServiceText.UseVisualStyleBackColor = true;
+            // 
+            // textBoxService
+            // 
+            this.textBoxService.Location = new System.Drawing.Point(6, 6);
+            this.textBoxService.Multiline = true;
+            this.textBoxService.Name = "textBoxService";
+            this.textBoxService.Size = new System.Drawing.Size(649, 296);
+            this.textBoxService.TabIndex = 24;
+            // 
             // tabPagePension
             // 
             this.tabPagePension.Controls.Add(this.textBoxPensionDetails);
@@ -492,7 +496,7 @@
             this.tabPagePension.Location = new System.Drawing.Point(4, 22);
             this.tabPagePension.Name = "tabPagePension";
             this.tabPagePension.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePension.Size = new System.Drawing.Size(661, 308);
+            this.tabPagePension.Size = new System.Drawing.Size(663, 307);
             this.tabPagePension.TabIndex = 2;
             this.tabPagePension.Text = "Pension";
             this.tabPagePension.UseVisualStyleBackColor = true;
@@ -524,6 +528,7 @@
             // 
             // tabPageSpouses
             // 
+            this.tabPageSpouses.Controls.Add(this.comboBoxMarriageCounty);
             this.tabPageSpouses.Controls.Add(this.label17);
             this.tabPageSpouses.Controls.Add(this.label16);
             this.tabPageSpouses.Controls.Add(this.label15);
@@ -544,17 +549,130 @@
             this.tabPageSpouses.Controls.Add(this.textBoxSpouseMiddleName);
             this.tabPageSpouses.Controls.Add(this.textBoxSpouseFirstName);
             this.tabPageSpouses.Controls.Add(this.textBoxSpouseMaidenName);
-            this.tabPageSpouses.Controls.Add(this.textBoxMarriageCounty);
             this.tabPageSpouses.Controls.Add(this.textBoxMarriageCity);
             this.tabPageSpouses.Controls.Add(this.textBoxMarriageState);
             this.tabPageSpouses.Controls.Add(this.textBoxMarriageCountry);
             this.tabPageSpouses.Location = new System.Drawing.Point(4, 22);
             this.tabPageSpouses.Name = "tabPageSpouses";
             this.tabPageSpouses.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSpouses.Size = new System.Drawing.Size(661, 308);
+            this.tabPageSpouses.Size = new System.Drawing.Size(663, 307);
             this.tabPageSpouses.TabIndex = 5;
             this.tabPageSpouses.Text = "Spouses";
             this.tabPageSpouses.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxMarriageCounty
+            // 
+            this.comboBoxMarriageCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxMarriageCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxMarriageCounty.FormattingEnabled = true;
+            this.comboBoxMarriageCounty.Items.AddRange(new object[] {
+            "Adams",
+            "Alexander ",
+            "Bond ",
+            "Boone ",
+            "Brown ",
+            "Bureau ",
+            "Calhoun ",
+            "Carroll ",
+            "Cass ",
+            "Champaign ",
+            "Christian ",
+            "Clark ",
+            "Clay ",
+            "Clinton ",
+            "Coles ",
+            "Cook ",
+            "Crawford ",
+            "Cumberland ",
+            "DeKalb ",
+            "DeWitt ",
+            "Douglas ",
+            "DuPage ",
+            "Edgar ",
+            "Edwards ",
+            "Effingham ",
+            "Fayette ",
+            "Ford ",
+            "Franklin ",
+            "Fulton ",
+            "Gallatin ",
+            "Greene ",
+            "Grundy ",
+            "Hamilton ",
+            "Hancock ",
+            "Hardin ",
+            "Henderson ",
+            "Henry ",
+            "Iroquois ",
+            "Jackson ",
+            "Jasper ",
+            "Jefferson ",
+            "Jersey ",
+            "Jo Daviess ",
+            "Johnson ",
+            "Kane ",
+            "Kankakee ",
+            "Kendall ",
+            "Knox ",
+            "Lake ",
+            "LaSalle ",
+            "Lawrence ",
+            "Lee ",
+            "Livingston ",
+            "Logan ",
+            "Macon ",
+            "Macoupin ",
+            "Madison ",
+            "Marion ",
+            "Marshall ",
+            "Mason ",
+            "Massac ",
+            "McDonough ",
+            "McHenry ",
+            "McLean ",
+            "Menard ",
+            "Mercer ",
+            "Monroe ",
+            "Montgomery ",
+            "Morgan ",
+            "Moultrie ",
+            "Ogle ",
+            "Peoria ",
+            "Perry ",
+            "Piatt ",
+            "Pike ",
+            "Pope ",
+            "Pulaski ",
+            "Putnam ",
+            "Randolph ",
+            "Richland ",
+            "Rock Island ",
+            "Saline ",
+            "Sangamon ",
+            "Schuyler ",
+            "Scott ",
+            "Shelby ",
+            "St. Clair ",
+            "Stark ",
+            "Stephenson ",
+            "Tazewell ",
+            "Union ",
+            "Vermilion ",
+            "Wabash ",
+            "Warren ",
+            "Washington ",
+            "Wayne ",
+            "White ",
+            "Whiteside ",
+            "Will ",
+            "Williamson ",
+            "Winnebago ",
+            "Woodford"});
+            this.comboBoxMarriageCounty.Location = new System.Drawing.Point(436, 162);
+            this.comboBoxMarriageCounty.Name = "comboBoxMarriageCounty";
+            this.comboBoxMarriageCounty.Size = new System.Drawing.Size(210, 21);
+            this.comboBoxMarriageCounty.TabIndex = 70;
+            this.comboBoxMarriageCounty.TextChanged += new System.EventHandler(this.comboBoxMarriageCounty_TextChanged);
             // 
             // label17
             // 
@@ -1030,14 +1148,6 @@
             this.textBoxSpouseMaidenName.Size = new System.Drawing.Size(210, 20);
             this.textBoxSpouseMaidenName.TabIndex = 4;
             // 
-            // textBoxMarriageCounty
-            // 
-            this.textBoxMarriageCounty.Location = new System.Drawing.Point(436, 163);
-            this.textBoxMarriageCounty.Name = "textBoxMarriageCounty";
-            this.textBoxMarriageCounty.Size = new System.Drawing.Size(210, 20);
-            this.textBoxMarriageCounty.TabIndex = 9;
-            this.textBoxMarriageCounty.TextChanged += new System.EventHandler(this.textBoxMarriageCounty_TextChanged);
-            // 
             // textBoxMarriageState
             // 
             this.textBoxMarriageState.Location = new System.Drawing.Point(436, 189);
@@ -1072,7 +1182,7 @@
             this.tabPageChildren.Location = new System.Drawing.Point(4, 22);
             this.tabPageChildren.Name = "tabPageChildren";
             this.tabPageChildren.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChildren.Size = new System.Drawing.Size(661, 308);
+            this.tabPageChildren.Size = new System.Drawing.Size(663, 307);
             this.tabPageChildren.TabIndex = 9;
             this.tabPageChildren.Text = "Children";
             this.tabPageChildren.UseVisualStyleBackColor = true;
@@ -1203,6 +1313,7 @@
             // 
             // tabPageResidences
             // 
+            this.tabPageResidences.Controls.Add(this.comboBoxResidenceCounty);
             this.tabPageResidences.Controls.Add(this.label22);
             this.tabPageResidences.Controls.Add(this.label21);
             this.tabPageResidences.Controls.Add(this.label20);
@@ -1212,7 +1323,6 @@
             this.tabPageResidences.Controls.Add(this.textBoxResidenceCountry);
             this.tabPageResidences.Controls.Add(this.textBoxResidenceState);
             this.tabPageResidences.Controls.Add(this.textBoxResidenceCity);
-            this.tabPageResidences.Controls.Add(this.textBoxResidenceCounty);
             this.tabPageResidences.Controls.Add(this.comboBoxMoveOutYear);
             this.tabPageResidences.Controls.Add(this.comboBoxMoveOutDay);
             this.tabPageResidences.Controls.Add(this.comboBoxMoveOutMonth);
@@ -1226,10 +1336,123 @@
             this.tabPageResidences.Location = new System.Drawing.Point(4, 22);
             this.tabPageResidences.Name = "tabPageResidences";
             this.tabPageResidences.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageResidences.Size = new System.Drawing.Size(661, 308);
+            this.tabPageResidences.Size = new System.Drawing.Size(663, 307);
             this.tabPageResidences.TabIndex = 7;
             this.tabPageResidences.Text = "Residences";
             this.tabPageResidences.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxResidenceCounty
+            // 
+            this.comboBoxResidenceCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxResidenceCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxResidenceCounty.FormattingEnabled = true;
+            this.comboBoxResidenceCounty.Items.AddRange(new object[] {
+            "Adams",
+            "Alexander ",
+            "Bond ",
+            "Boone ",
+            "Brown ",
+            "Bureau ",
+            "Calhoun ",
+            "Carroll ",
+            "Cass ",
+            "Champaign ",
+            "Christian ",
+            "Clark ",
+            "Clay ",
+            "Clinton ",
+            "Coles ",
+            "Cook ",
+            "Crawford ",
+            "Cumberland ",
+            "DeKalb ",
+            "DeWitt ",
+            "Douglas ",
+            "DuPage ",
+            "Edgar ",
+            "Edwards ",
+            "Effingham ",
+            "Fayette ",
+            "Ford ",
+            "Franklin ",
+            "Fulton ",
+            "Gallatin ",
+            "Greene ",
+            "Grundy ",
+            "Hamilton ",
+            "Hancock ",
+            "Hardin ",
+            "Henderson ",
+            "Henry ",
+            "Iroquois ",
+            "Jackson ",
+            "Jasper ",
+            "Jefferson ",
+            "Jersey ",
+            "Jo Daviess ",
+            "Johnson ",
+            "Kane ",
+            "Kankakee ",
+            "Kendall ",
+            "Knox ",
+            "Lake ",
+            "LaSalle ",
+            "Lawrence ",
+            "Lee ",
+            "Livingston ",
+            "Logan ",
+            "Macon ",
+            "Macoupin ",
+            "Madison ",
+            "Marion ",
+            "Marshall ",
+            "Mason ",
+            "Massac ",
+            "McDonough ",
+            "McHenry ",
+            "McLean ",
+            "Menard ",
+            "Mercer ",
+            "Monroe ",
+            "Montgomery ",
+            "Morgan ",
+            "Moultrie ",
+            "Ogle ",
+            "Peoria ",
+            "Perry ",
+            "Piatt ",
+            "Pike ",
+            "Pope ",
+            "Pulaski ",
+            "Putnam ",
+            "Randolph ",
+            "Richland ",
+            "Rock Island ",
+            "Saline ",
+            "Sangamon ",
+            "Schuyler ",
+            "Scott ",
+            "Shelby ",
+            "St. Clair ",
+            "Stark ",
+            "Stephenson ",
+            "Tazewell ",
+            "Union ",
+            "Vermilion ",
+            "Wabash ",
+            "Warren ",
+            "Washington ",
+            "Wayne ",
+            "White ",
+            "Whiteside ",
+            "Will ",
+            "Williamson ",
+            "Winnebago ",
+            "Woodford"});
+            this.comboBoxResidenceCounty.Location = new System.Drawing.Point(417, 32);
+            this.comboBoxResidenceCounty.Name = "comboBoxResidenceCounty";
+            this.comboBoxResidenceCounty.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxResidenceCounty.TabIndex = 69;
             // 
             // label22
             // 
@@ -1308,14 +1531,6 @@
             this.textBoxResidenceCity.Size = new System.Drawing.Size(229, 20);
             this.textBoxResidenceCity.TabIndex = 1;
             this.textBoxResidenceCity.TextChanged += new System.EventHandler(this.textBoxResidenceCity_TextChanged);
-            // 
-            // textBoxResidenceCounty
-            // 
-            this.textBoxResidenceCounty.Location = new System.Drawing.Point(417, 32);
-            this.textBoxResidenceCounty.Name = "textBoxResidenceCounty";
-            this.textBoxResidenceCounty.Size = new System.Drawing.Size(229, 20);
-            this.textBoxResidenceCounty.TabIndex = 2;
-            this.textBoxResidenceCounty.TextChanged += new System.EventHandler(this.textBoxResidenceCounty_TextChanged);
             // 
             // comboBoxMoveOutYear
             // 
@@ -2022,13 +2237,24 @@
             this.listViewResidences.UseCompatibleStateImageBehavior = false;
             this.listViewResidences.SelectedIndexChanged += new System.EventHandler(this.listViewResidences_SelectedIndexChanged);
             // 
+            // tabResidenceText
+            // 
+            this.tabResidenceText.Controls.Add(this.textBoxResidenceText);
+            this.tabResidenceText.Location = new System.Drawing.Point(4, 22);
+            this.tabResidenceText.Name = "tabResidenceText";
+            this.tabResidenceText.Padding = new System.Windows.Forms.Padding(3);
+            this.tabResidenceText.Size = new System.Drawing.Size(663, 307);
+            this.tabResidenceText.TabIndex = 10;
+            this.tabResidenceText.Text = "Residence Text";
+            this.tabResidenceText.UseVisualStyleBackColor = true;
+            // 
             // tabPageMarker
             // 
             this.tabPageMarker.Controls.Add(this.textBoxMarker);
             this.tabPageMarker.Location = new System.Drawing.Point(4, 22);
             this.tabPageMarker.Name = "tabPageMarker";
             this.tabPageMarker.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMarker.Size = new System.Drawing.Size(661, 308);
+            this.tabPageMarker.Size = new System.Drawing.Size(663, 307);
             this.tabPageMarker.TabIndex = 1;
             this.tabPageMarker.Text = "Marker";
             this.tabPageMarker.UseVisualStyleBackColor = true;
@@ -2047,7 +2273,7 @@
             this.tabPageAdditional.Location = new System.Drawing.Point(4, 22);
             this.tabPageAdditional.Name = "tabPageAdditional";
             this.tabPageAdditional.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAdditional.Size = new System.Drawing.Size(661, 308);
+            this.tabPageAdditional.Size = new System.Drawing.Size(663, 307);
             this.tabPageAdditional.TabIndex = 4;
             this.tabPageAdditional.Text = "Extra Info";
             this.tabPageAdditional.UseVisualStyleBackColor = true;
@@ -2066,7 +2292,7 @@
             this.tabPageSources.Location = new System.Drawing.Point(4, 22);
             this.tabPageSources.Name = "tabPageSources";
             this.tabPageSources.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSources.Size = new System.Drawing.Size(661, 308);
+            this.tabPageSources.Size = new System.Drawing.Size(663, 307);
             this.tabPageSources.TabIndex = 3;
             this.tabPageSources.Text = "Sources";
             this.tabPageSources.UseVisualStyleBackColor = true;
@@ -2475,15 +2701,6 @@
             this.textBoxDeathState.TabIndex = 17;
             this.textBoxDeathState.TextChanged += new System.EventHandler(this.textBoxDeathState_TextChanged);
             // 
-            // textBoxDeathCounty
-            // 
-            this.textBoxDeathCounty.Location = new System.Drawing.Point(456, 107);
-            this.textBoxDeathCounty.MaxLength = 40;
-            this.textBoxDeathCounty.Name = "textBoxDeathCounty";
-            this.textBoxDeathCounty.Size = new System.Drawing.Size(229, 20);
-            this.textBoxDeathCounty.TabIndex = 16;
-            this.textBoxDeathCounty.TextChanged += new System.EventHandler(this.textBoxDeathCounty_TextChanged);
-            // 
             // comboBoxDeathYear
             // 
             this.comboBoxDeathYear.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -2836,7 +3053,6 @@
             // 
             // textBoxCemeteryCountry
             // 
-            this.textBoxCemeteryCountry.Enabled = false;
             this.textBoxCemeteryCountry.Location = new System.Drawing.Point(437, 238);
             this.textBoxCemeteryCountry.Name = "textBoxCemeteryCountry";
             this.textBoxCemeteryCountry.Size = new System.Drawing.Size(102, 20);
@@ -2845,21 +3061,11 @@
             // 
             // textBoxCemeteryState
             // 
-            this.textBoxCemeteryState.Enabled = false;
             this.textBoxCemeteryState.Location = new System.Drawing.Point(329, 238);
             this.textBoxCemeteryState.Name = "textBoxCemeteryState";
             this.textBoxCemeteryState.Size = new System.Drawing.Size(102, 20);
             this.textBoxCemeteryState.TabIndex = 22;
             this.textBoxCemeteryState.Text = "Illinois";
-            // 
-            // textBoxCemeteryCounty
-            // 
-            this.textBoxCemeteryCounty.Location = new System.Drawing.Point(221, 238);
-            this.textBoxCemeteryCounty.MaxLength = 40;
-            this.textBoxCemeteryCounty.Name = "textBoxCemeteryCounty";
-            this.textBoxCemeteryCounty.Size = new System.Drawing.Size(102, 20);
-            this.textBoxCemeteryCounty.TabIndex = 23;
-            this.textBoxCemeteryCounty.TextChanged += new System.EventHandler(this.textBoxCemeteryCounty_TextChanged);
             // 
             // textBoxCemeteryCity
             // 
@@ -2894,15 +3100,6 @@
             this.textBoxBirthCity.Name = "textBoxBirthCity";
             this.textBoxBirthCity.Size = new System.Drawing.Size(229, 20);
             this.textBoxBirthCity.TabIndex = 8;
-            // 
-            // textBoxBirthCounty
-            // 
-            this.textBoxBirthCounty.Location = new System.Drawing.Point(113, 108);
-            this.textBoxBirthCounty.MaxLength = 40;
-            this.textBoxBirthCounty.Name = "textBoxBirthCounty";
-            this.textBoxBirthCounty.Size = new System.Drawing.Size(229, 20);
-            this.textBoxBirthCounty.TabIndex = 9;
-            this.textBoxBirthCounty.TextChanged += new System.EventHandler(this.textBoxBirthCounty_TextChanged);
             // 
             // textBoxBirthCountry
             // 
@@ -3045,11 +3242,364 @@
             this.label35.TabIndex = 65;
             this.label35.Text = "Longitude:";
             // 
+            // comboBoxCemeteryCounty
+            // 
+            this.comboBoxCemeteryCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxCemeteryCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxCemeteryCounty.FormattingEnabled = true;
+            this.comboBoxCemeteryCounty.Items.AddRange(new object[] {
+            "Adams",
+            "Alexander ",
+            "Bond ",
+            "Boone ",
+            "Brown ",
+            "Bureau ",
+            "Calhoun ",
+            "Carroll ",
+            "Cass ",
+            "Champaign ",
+            "Christian ",
+            "Clark ",
+            "Clay ",
+            "Clinton ",
+            "Coles ",
+            "Cook ",
+            "Crawford ",
+            "Cumberland ",
+            "DeKalb ",
+            "DeWitt ",
+            "Douglas ",
+            "DuPage ",
+            "Edgar ",
+            "Edwards ",
+            "Effingham ",
+            "Fayette ",
+            "Ford ",
+            "Franklin ",
+            "Fulton ",
+            "Gallatin ",
+            "Greene ",
+            "Grundy ",
+            "Hamilton ",
+            "Hancock ",
+            "Hardin ",
+            "Henderson ",
+            "Henry ",
+            "Iroquois ",
+            "Jackson ",
+            "Jasper ",
+            "Jefferson ",
+            "Jersey ",
+            "Jo Daviess ",
+            "Johnson ",
+            "Kane ",
+            "Kankakee ",
+            "Kendall ",
+            "Knox ",
+            "Lake ",
+            "LaSalle ",
+            "Lawrence ",
+            "Lee ",
+            "Livingston ",
+            "Logan ",
+            "Macon ",
+            "Macoupin ",
+            "Madison ",
+            "Marion ",
+            "Marshall ",
+            "Mason ",
+            "Massac ",
+            "McDonough ",
+            "McHenry ",
+            "McLean ",
+            "Menard ",
+            "Mercer ",
+            "Monroe ",
+            "Montgomery ",
+            "Morgan ",
+            "Moultrie ",
+            "Ogle ",
+            "Peoria ",
+            "Perry ",
+            "Piatt ",
+            "Pike ",
+            "Pope ",
+            "Pulaski ",
+            "Putnam ",
+            "Randolph ",
+            "Richland ",
+            "Rock Island ",
+            "Saline ",
+            "Sangamon ",
+            "Schuyler ",
+            "Scott ",
+            "Shelby ",
+            "St. Clair ",
+            "Stark ",
+            "Stephenson ",
+            "Tazewell ",
+            "Union ",
+            "Vermilion ",
+            "Wabash ",
+            "Warren ",
+            "Washington ",
+            "Wayne ",
+            "White ",
+            "Whiteside ",
+            "Will ",
+            "Williamson ",
+            "Winnebago ",
+            "Woodford"});
+            this.comboBoxCemeteryCounty.Location = new System.Drawing.Point(221, 238);
+            this.comboBoxCemeteryCounty.Name = "comboBoxCemeteryCounty";
+            this.comboBoxCemeteryCounty.Size = new System.Drawing.Size(102, 21);
+            this.comboBoxCemeteryCounty.TabIndex = 66;
+            this.comboBoxCemeteryCounty.TextChanged += new System.EventHandler(this.comboBoxCemeteryCounty_TextChanged);
+            // 
+            // comboBoxBirthCounty
+            // 
+            this.comboBoxBirthCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxBirthCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxBirthCounty.FormattingEnabled = true;
+            this.comboBoxBirthCounty.Items.AddRange(new object[] {
+            "Adams",
+            "Alexander ",
+            "Bond ",
+            "Boone ",
+            "Brown ",
+            "Bureau ",
+            "Calhoun ",
+            "Carroll ",
+            "Cass ",
+            "Champaign ",
+            "Christian ",
+            "Clark ",
+            "Clay ",
+            "Clinton ",
+            "Coles ",
+            "Cook ",
+            "Crawford ",
+            "Cumberland ",
+            "DeKalb ",
+            "DeWitt ",
+            "Douglas ",
+            "DuPage ",
+            "Edgar ",
+            "Edwards ",
+            "Effingham ",
+            "Fayette ",
+            "Ford ",
+            "Franklin ",
+            "Fulton ",
+            "Gallatin ",
+            "Greene ",
+            "Grundy ",
+            "Hamilton ",
+            "Hancock ",
+            "Hardin ",
+            "Henderson ",
+            "Henry ",
+            "Iroquois ",
+            "Jackson ",
+            "Jasper ",
+            "Jefferson ",
+            "Jersey ",
+            "Jo Daviess ",
+            "Johnson ",
+            "Kane ",
+            "Kankakee ",
+            "Kendall ",
+            "Knox ",
+            "Lake ",
+            "LaSalle ",
+            "Lawrence ",
+            "Lee ",
+            "Livingston ",
+            "Logan ",
+            "Macon ",
+            "Macoupin ",
+            "Madison ",
+            "Marion ",
+            "Marshall ",
+            "Mason ",
+            "Massac ",
+            "McDonough ",
+            "McHenry ",
+            "McLean ",
+            "Menard ",
+            "Mercer ",
+            "Monroe ",
+            "Montgomery ",
+            "Morgan ",
+            "Moultrie ",
+            "Ogle ",
+            "Peoria ",
+            "Perry ",
+            "Piatt ",
+            "Pike ",
+            "Pope ",
+            "Pulaski ",
+            "Putnam ",
+            "Randolph ",
+            "Richland ",
+            "Rock Island ",
+            "Saline ",
+            "Sangamon ",
+            "Schuyler ",
+            "Scott ",
+            "Shelby ",
+            "St. Clair ",
+            "Stark ",
+            "Stephenson ",
+            "Tazewell ",
+            "Union ",
+            "Vermilion ",
+            "Wabash ",
+            "Warren ",
+            "Washington ",
+            "Wayne ",
+            "White ",
+            "Whiteside ",
+            "Will ",
+            "Williamson ",
+            "Winnebago ",
+            "Woodford"});
+            this.comboBoxBirthCounty.Location = new System.Drawing.Point(113, 107);
+            this.comboBoxBirthCounty.Name = "comboBoxBirthCounty";
+            this.comboBoxBirthCounty.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxBirthCounty.TabIndex = 67;
+            this.comboBoxBirthCounty.TextChanged += new System.EventHandler(this.comboBoxBirthCounty_TextChanged);
+            // 
+            // comboBoxDeathCounty
+            // 
+            this.comboBoxDeathCounty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxDeathCounty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxDeathCounty.FormattingEnabled = true;
+            this.comboBoxDeathCounty.Items.AddRange(new object[] {
+            "Adams",
+            "Alexander ",
+            "Bond ",
+            "Boone ",
+            "Brown ",
+            "Bureau ",
+            "Calhoun ",
+            "Carroll ",
+            "Cass ",
+            "Champaign ",
+            "Christian ",
+            "Clark ",
+            "Clay ",
+            "Clinton ",
+            "Coles ",
+            "Cook ",
+            "Crawford ",
+            "Cumberland ",
+            "DeKalb ",
+            "DeWitt ",
+            "Douglas ",
+            "DuPage ",
+            "Edgar ",
+            "Edwards ",
+            "Effingham ",
+            "Fayette ",
+            "Ford ",
+            "Franklin ",
+            "Fulton ",
+            "Gallatin ",
+            "Greene ",
+            "Grundy ",
+            "Hamilton ",
+            "Hancock ",
+            "Hardin ",
+            "Henderson ",
+            "Henry ",
+            "Iroquois ",
+            "Jackson ",
+            "Jasper ",
+            "Jefferson ",
+            "Jersey ",
+            "Jo Daviess ",
+            "Johnson ",
+            "Kane ",
+            "Kankakee ",
+            "Kendall ",
+            "Knox ",
+            "Lake ",
+            "LaSalle ",
+            "Lawrence ",
+            "Lee ",
+            "Livingston ",
+            "Logan ",
+            "Macon ",
+            "Macoupin ",
+            "Madison ",
+            "Marion ",
+            "Marshall ",
+            "Mason ",
+            "Massac ",
+            "McDonough ",
+            "McHenry ",
+            "McLean ",
+            "Menard ",
+            "Mercer ",
+            "Monroe ",
+            "Montgomery ",
+            "Morgan ",
+            "Moultrie ",
+            "Ogle ",
+            "Peoria ",
+            "Perry ",
+            "Piatt ",
+            "Pike ",
+            "Pope ",
+            "Pulaski ",
+            "Putnam ",
+            "Randolph ",
+            "Richland ",
+            "Rock Island ",
+            "Saline ",
+            "Sangamon ",
+            "Schuyler ",
+            "Scott ",
+            "Shelby ",
+            "St. Clair ",
+            "Stark ",
+            "Stephenson ",
+            "Tazewell ",
+            "Union ",
+            "Vermilion ",
+            "Wabash ",
+            "Warren ",
+            "Washington ",
+            "Wayne ",
+            "White ",
+            "Whiteside ",
+            "Will ",
+            "Williamson ",
+            "Winnebago ",
+            "Woodford"});
+            this.comboBoxDeathCounty.Location = new System.Drawing.Point(456, 107);
+            this.comboBoxDeathCounty.Name = "comboBoxDeathCounty";
+            this.comboBoxDeathCounty.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxDeathCounty.TabIndex = 68;
+            this.comboBoxDeathCounty.TextChanged += new System.EventHandler(this.comboBoxDeathCounty_TextChanged);
+            // 
+            // textBoxResidenceText
+            // 
+            this.textBoxResidenceText.Location = new System.Drawing.Point(7, 7);
+            this.textBoxResidenceText.Multiline = true;
+            this.textBoxResidenceText.Name = "textBoxResidenceText";
+            this.textBoxResidenceText.Size = new System.Drawing.Size(650, 294);
+            this.textBoxResidenceText.TabIndex = 0;
+            // 
             // DetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 633);
+            this.Controls.Add(this.comboBoxDeathCounty);
+            this.Controls.Add(this.comboBoxBirthCounty);
+            this.Controls.Add(this.comboBoxCemeteryCounty);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.textBoxLongitude);
@@ -3068,15 +3618,12 @@
             this.Controls.Add(this.textBoxBirthState);
             this.Controls.Add(this.textBoxBirthCity);
             this.Controls.Add(this.textBoxCemeteryCountry);
-            this.Controls.Add(this.textBoxBirthCounty);
             this.Controls.Add(this.textBoxCemeteryState);
             this.Controls.Add(this.textBoxBirthCountry);
-            this.Controls.Add(this.textBoxCemeteryCounty);
             this.Controls.Add(this.textBoxCemeteryCity);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxDeathCountry);
             this.Controls.Add(this.textBoxDeathState);
-            this.Controls.Add(this.textBoxDeathCounty);
             this.Controls.Add(this.comboBoxDeathYear);
             this.Controls.Add(this.comboBoxDeathDay);
             this.Controls.Add(this.comboBoxDeathMonth);
@@ -3090,7 +3637,7 @@
             this.Controls.Add(this.textBoxSoldierMiddleName);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.tabControlInfo);
+            this.Controls.Add(this.tab);
             this.Controls.Add(this.textBoxCemetery);
             this.Controls.Add(this.textBoxSoldierFirstName);
             this.Controls.Add(this.labelBirthLocation);
@@ -3100,11 +3647,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DetailsForm";
             this.Text = "Soldier Details";
-            this.tabControlInfo.ResumeLayout(false);
-            this.tabPageServiceText.ResumeLayout(false);
-            this.tabPageServiceText.PerformLayout();
+            this.tab.ResumeLayout(false);
             this.tabPageServiceInfo.ResumeLayout(false);
             this.tabPageServiceInfo.PerformLayout();
+            this.tabPageServiceText.ResumeLayout(false);
+            this.tabPageServiceText.PerformLayout();
             this.tabPagePension.ResumeLayout(false);
             this.tabPagePension.PerformLayout();
             this.tabPageSpouses.ResumeLayout(false);
@@ -3113,6 +3660,8 @@
             this.tabPageChildren.PerformLayout();
             this.tabPageResidences.ResumeLayout(false);
             this.tabPageResidences.PerformLayout();
+            this.tabResidenceText.ResumeLayout(false);
+            this.tabResidenceText.PerformLayout();
             this.tabPageMarker.ResumeLayout(false);
             this.tabPageMarker.PerformLayout();
             this.tabPageAdditional.ResumeLayout(false);
@@ -3140,7 +3689,7 @@
         private System.Windows.Forms.TextBox textBoxSoldierFirstName;
         private System.Windows.Forms.TextBox textBoxCemetery;
         private System.Windows.Forms.TextBox textBoxMarriageCity;
-        private System.Windows.Forms.TabControl tabControlInfo;
+        private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage tabPageServiceText;
         private System.Windows.Forms.TabPage tabPageMarker;
         private System.Windows.Forms.TabPage tabPagePension;
@@ -3162,11 +3711,9 @@
         private System.Windows.Forms.ComboBox comboBoxBirthDay;
         private System.Windows.Forms.ComboBox comboBoxBirthYear;
         private System.Windows.Forms.TextBox textBoxMarriageState;
-        private System.Windows.Forms.TextBox textBoxMarriageCounty;
         private System.Windows.Forms.TextBox textBoxMarriageCountry;
         private System.Windows.Forms.TextBox textBoxDeathCountry;
         private System.Windows.Forms.TextBox textBoxDeathState;
-        private System.Windows.Forms.TextBox textBoxDeathCounty;
         private System.Windows.Forms.ComboBox comboBoxDeathYear;
         private System.Windows.Forms.ComboBox comboBoxDeathDay;
         private System.Windows.Forms.ComboBox comboBoxDeathMonth;
@@ -3174,7 +3721,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxCemeteryCountry;
         private System.Windows.Forms.TextBox textBoxCemeteryState;
-        private System.Windows.Forms.TextBox textBoxCemeteryCounty;
         private System.Windows.Forms.TextBox textBoxCemeteryCity;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPageSpouses;
@@ -3224,12 +3770,10 @@
         private System.Windows.Forms.Button buttonAddResidence;
         private System.Windows.Forms.TextBox textBoxBirthState;
         private System.Windows.Forms.TextBox textBoxBirthCity;
-        private System.Windows.Forms.TextBox textBoxBirthCounty;
         private System.Windows.Forms.TextBox textBoxBirthCountry;
         private System.Windows.Forms.TextBox textBoxResidenceCountry;
         private System.Windows.Forms.TextBox textBoxResidenceState;
         private System.Windows.Forms.TextBox textBoxResidenceCity;
-        private System.Windows.Forms.TextBox textBoxResidenceCounty;
         private System.Windows.Forms.ComboBox comboBoxMoveOutYear;
         private System.Windows.Forms.ComboBox comboBoxMoveOutDay;
         private System.Windows.Forms.ComboBox comboBoxMoveOutMonth;
@@ -3265,5 +3809,12 @@
         private System.Windows.Forms.TextBox textBoxLongitude;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ComboBox comboBoxCemeteryCounty;
+        private System.Windows.Forms.ComboBox comboBoxBirthCounty;
+        private System.Windows.Forms.ComboBox comboBoxMarriageCounty;
+        private System.Windows.Forms.ComboBox comboBoxResidenceCounty;
+        private System.Windows.Forms.ComboBox comboBoxDeathCounty;
+        private System.Windows.Forms.TabPage tabResidenceText;
+        private System.Windows.Forms.TextBox textBoxResidenceText;
     }
 }
