@@ -15,7 +15,7 @@ namespace Soldiers
     public partial class SoldiersForm : Form
     {
         private ListViewColumnSorter lvwColumnSorter;
-
+        public SoldiersForm parentForm = null; //so we know what db to edit, and so we can refresh list when done
         public String databaseFile = "";
 
         public SoldiersForm()
@@ -30,9 +30,10 @@ namespace Soldiers
         }
 
         //handles calling on a custom database
-        public SoldiersForm(String db)
+        public SoldiersForm(String db, SoldiersForm pf)
         {
             databaseFile = db;
+            parentForm = pf;
             InitializeComponent();
             menuStripViewSoldierList_Click(null, null);
 
@@ -646,7 +647,7 @@ namespace Soldiers
             try
             {
                 //txtBrowse.Text = browseFile.FileName;
-                SoldiersForm secondaryDatabase = new SoldiersForm(browseFile.FileName.ToString());
+                SoldiersForm secondaryDatabase = new SoldiersForm(browseFile.FileName.ToString(),this);
                 secondaryDatabase.Show();
                 secondaryDatabase.buttonSubmitToMaster.Show();
                 secondaryDatabase.menuStripItemOpenDatabase.Enabled = false;
@@ -667,32 +668,40 @@ namespace Soldiers
             saveFileDialog1.Filter = "s3db files (*.s3db)|*.s3db";//NEW
             //saveFileDialog1.FilterIndex = 1;//NEW
             saveFileDialog1.RestoreDirectory = true;//NEW
+            //bool fileSpecified = true;
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)//NEW
             {
                 String path = new database().path;
                 System.IO.File.Copy(path + "soldierdb_template.s3db", saveFileDialog1.FileName.ToString(), true);
-            }
 
-            try
-            {
-                //txtBrowse.Text = browseFile.FileName;
-                SoldiersForm secondaryDatabase = new SoldiersForm(saveFileDialog1.FileName.ToString());
-                secondaryDatabase.Show();
-                secondaryDatabase.buttonSubmitToMaster.Show();
-                secondaryDatabase.menuStripItemOpenDatabase.Enabled = false;
-                secondaryDatabase.Text = "Secondary Database - " + saveFileDialog1.FileName.ToString();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error opening file", "File Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                try
+                {
+                    //txtBrowse.Text = browseFile.FileName;
+
+                    SoldiersForm secondaryDatabase = new SoldiersForm(saveFileDialog1.FileName.ToString(), this);
+                    secondaryDatabase.Show();
+                    secondaryDatabase.buttonSubmitToMaster.Show();
+                    secondaryDatabase.menuStripItemOpenDatabase.Enabled = false;
+                    secondaryDatabase.Text = "Secondary Database - " + saveFileDialog1.FileName.ToString();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error opening file", "File Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
 
 
 
         }
 
+        private void menuStripItemQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         //buttons
 
         private void buttonDetails_Click(object sender, EventArgs e)
@@ -783,7 +792,11 @@ namespace Soldiers
                 
 
             }
+
+            parentForm.menuStripViewSoldierList_Click(null, null);
             this.Close();
+
+            //MessageBox.Show("The master list should be refreshed before new entries will be shown. \nRefresh the list under the View menu.");
         }
 
         private void buttonCreateDuplicate_Click(object sender, EventArgs e)
@@ -853,6 +866,10 @@ namespace Soldiers
             SearchForm newSearch = new SearchForm(this);
             newSearch.Show();
         }
+
+
+
+
 
 
 
