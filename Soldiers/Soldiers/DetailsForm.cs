@@ -1263,6 +1263,11 @@ namespace Soldiers
             return 0;
         }
 
+        private void tabPageResidences_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

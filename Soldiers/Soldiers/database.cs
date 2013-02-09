@@ -13,7 +13,7 @@ namespace Soldiers
     {
         //public String file = "soldiers.dat";
         public SQLiteConnection m_dbConnection; //our handle
-        public String path = "C:\\Program Files\\DAR Illinois Soldiers Database\\";
+        public String path = "C:\\Program Files\\Illinois Soldiers Database\\";
 
 
         //uses opendb to open the default database located at "path"

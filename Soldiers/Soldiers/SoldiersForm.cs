@@ -113,7 +113,7 @@ namespace Soldiers
         //info about the app
         private void menuStripItemAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Soldiers Buried in Illinois Database \nVersion 1.3 \nCreated by: Kyle Hershey \nDate: December 2012 \nContact: kwhershey@gmail.com");
+            MessageBox.Show("Soldiers Buried in Illinois Database \nVersion 1.4 \nCreated by: Kyle Hershey \nDate: December 2012 \nContact: kwhershey@gmail.com");
         }
 
         //prints the book as a text file

@@ -36,6 +36,7 @@
             this.menuStripItemPrintLatexBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripItemOpenDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripItemCreateDatabase = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripItemQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripView = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripViewSoldierList = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripItemAdvancedSearch = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,6 @@
             this.labelFilter = new System.Windows.Forms.Label();
             this.buttonSubmitToMaster = new System.Windows.Forms.Button();
             this.buttonCreateDuplicate = new System.Windows.Forms.Button();
-            this.menuStripItemQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,6 +119,13 @@
             this.menuStripItemCreateDatabase.Size = new System.Drawing.Size(217, 22);
             this.menuStripItemCreateDatabase.Text = "Create Secondary Database";
             this.menuStripItemCreateDatabase.Click += new System.EventHandler(this.menuStripItemCreateDatabase_Click);
+            // 
+            // menuStripItemQuit
+            // 
+            this.menuStripItemQuit.Name = "menuStripItemQuit";
+            this.menuStripItemQuit.Size = new System.Drawing.Size(217, 22);
+            this.menuStripItemQuit.Text = "Quit";
+            this.menuStripItemQuit.Click += new System.EventHandler(this.menuStripItemQuit_Click);
             // 
             // menuStripView
             // 
@@ -211,6 +218,7 @@
             // 
             // buttonSubmitToMaster
             // 
+            this.buttonSubmitToMaster.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSubmitToMaster.Location = new System.Drawing.Point(356, 527);
             this.buttonSubmitToMaster.Name = "buttonSubmitToMaster";
             this.buttonSubmitToMaster.Size = new System.Drawing.Size(103, 23);
@@ -222,6 +230,7 @@
             // 
             // buttonCreateDuplicate
             // 
+            this.buttonCreateDuplicate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonCreateDuplicate.Location = new System.Drawing.Point(255, 527);
             this.buttonCreateDuplicate.Name = "buttonCreateDuplicate";
             this.buttonCreateDuplicate.Size = new System.Drawing.Size(95, 23);
@@ -229,13 +238,6 @@
             this.buttonCreateDuplicate.Text = "Create Duplicate";
             this.buttonCreateDuplicate.UseVisualStyleBackColor = true;
             this.buttonCreateDuplicate.Click += new System.EventHandler(this.buttonCreateDuplicate_Click);
-            // 
-            // menuStripItemQuit
-            // 
-            this.menuStripItemQuit.Name = "menuStripItemQuit";
-            this.menuStripItemQuit.Size = new System.Drawing.Size(217, 22);
-            this.menuStripItemQuit.Text = "Quit";
-            this.menuStripItemQuit.Click += new System.EventHandler(this.menuStripItemQuit_Click);
             // 
             // SoldiersForm
             // 

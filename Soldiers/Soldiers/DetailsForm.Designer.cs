@@ -123,6 +123,7 @@
             this.buttonAddResidence = new System.Windows.Forms.Button();
             this.listViewResidences = new System.Windows.Forms.ListView();
             this.tabResidenceText = new System.Windows.Forms.TabPage();
+            this.textBoxResidenceText = new System.Windows.Forms.TextBox();
             this.tabPageMarker = new System.Windows.Forms.TabPage();
             this.textBoxMarker = new System.Windows.Forms.TextBox();
             this.tabPageAdditional = new System.Windows.Forms.TabPage();
@@ -169,7 +170,6 @@
             this.comboBoxCemeteryCounty = new System.Windows.Forms.ComboBox();
             this.comboBoxBirthCounty = new System.Windows.Forms.ComboBox();
             this.comboBoxDeathCounty = new System.Windows.Forms.ComboBox();
-            this.textBoxResidenceText = new System.Windows.Forms.TextBox();
             this.tab.SuspendLayout();
             this.tabPageServiceInfo.SuspendLayout();
             this.tabPageServiceText.SuspendLayout();
@@ -300,7 +300,7 @@
             // 
             // textBoxMarriageCity
             // 
-            this.textBoxMarriageCity.Location = new System.Drawing.Point(436, 137);
+            this.textBoxMarriageCity.Location = new System.Drawing.Point(436, 166);
             this.textBoxMarriageCity.Name = "textBoxMarriageCity";
             this.textBoxMarriageCity.Size = new System.Drawing.Size(210, 20);
             this.textBoxMarriageCity.TabIndex = 8;
@@ -482,6 +482,9 @@
             // 
             // textBoxService
             // 
+            this.textBoxService.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxService.Location = new System.Drawing.Point(6, 6);
             this.textBoxService.Multiline = true;
             this.textBoxService.Name = "textBoxService";
@@ -503,6 +506,9 @@
             // 
             // textBoxPensionDetails
             // 
+            this.textBoxPensionDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPensionDetails.Location = new System.Drawing.Point(6, 32);
             this.textBoxPensionDetails.Multiline = true;
             this.textBoxPensionDetails.Name = "textBoxPensionDetails";
@@ -668,7 +674,7 @@
             "Williamson ",
             "Winnebago ",
             "Woodford"});
-            this.comboBoxMarriageCounty.Location = new System.Drawing.Point(436, 162);
+            this.comboBoxMarriageCounty.Location = new System.Drawing.Point(436, 191);
             this.comboBoxMarriageCounty.Name = "comboBoxMarriageCounty";
             this.comboBoxMarriageCounty.Size = new System.Drawing.Size(210, 21);
             this.comboBoxMarriageCounty.TabIndex = 70;
@@ -677,7 +683,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(343, 218);
+            this.label17.Location = new System.Drawing.Point(343, 247);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(90, 13);
             this.label17.TabIndex = 69;
@@ -686,7 +692,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(343, 192);
+            this.label16.Location = new System.Drawing.Point(343, 221);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(79, 13);
             this.label16.TabIndex = 68;
@@ -695,7 +701,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(343, 166);
+            this.label15.Location = new System.Drawing.Point(343, 195);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(87, 13);
             this.label15.TabIndex = 67;
@@ -704,7 +710,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(343, 35);
+            this.label13.Location = new System.Drawing.Point(343, 64);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(72, 13);
             this.label13.TabIndex = 65;
@@ -713,7 +719,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(343, 61);
+            this.label12.Location = new System.Drawing.Point(343, 90);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 13);
             this.label12.TabIndex = 64;
@@ -722,7 +728,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(343, 87);
+            this.label11.Location = new System.Drawing.Point(343, 116);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 13);
             this.label11.TabIndex = 63;
@@ -730,9 +736,9 @@
             // 
             // buttonRemoveSpouse
             // 
-            this.buttonRemoveSpouse.Location = new System.Drawing.Point(571, 241);
+            this.buttonRemoveSpouse.Location = new System.Drawing.Point(574, 6);
             this.buttonRemoveSpouse.Name = "buttonRemoveSpouse";
-            this.buttonRemoveSpouse.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemoveSpouse.Size = new System.Drawing.Size(72, 23);
             this.buttonRemoveSpouse.TabIndex = 62;
             this.buttonRemoveSpouse.Text = "Remove";
             this.buttonRemoveSpouse.UseVisualStyleBackColor = true;
@@ -740,9 +746,9 @@
             // 
             // buttonUpdateSpouse
             // 
-            this.buttonUpdateSpouse.Location = new System.Drawing.Point(490, 241);
+            this.buttonUpdateSpouse.Location = new System.Drawing.Point(496, 6);
             this.buttonUpdateSpouse.Name = "buttonUpdateSpouse";
-            this.buttonUpdateSpouse.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdateSpouse.Size = new System.Drawing.Size(72, 23);
             this.buttonUpdateSpouse.TabIndex = 61;
             this.buttonUpdateSpouse.Text = "Update";
             this.buttonUpdateSpouse.UseVisualStyleBackColor = true;
@@ -750,9 +756,9 @@
             // 
             // buttonAddSpouse
             // 
-            this.buttonAddSpouse.Location = new System.Drawing.Point(409, 241);
+            this.buttonAddSpouse.Location = new System.Drawing.Point(418, 6);
             this.buttonAddSpouse.Name = "buttonAddSpouse";
-            this.buttonAddSpouse.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSpouse.Size = new System.Drawing.Size(72, 23);
             this.buttonAddSpouse.TabIndex = 60;
             this.buttonAddSpouse.Text = "Add";
             this.buttonAddSpouse.UseVisualStyleBackColor = true;
@@ -761,7 +767,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(343, 140);
+            this.label6.Location = new System.Drawing.Point(343, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 59;
@@ -1026,7 +1032,7 @@
             "1898",
             "1899",
             "1900"});
-            this.comboBoxMarriageYear.Location = new System.Drawing.Point(574, 110);
+            this.comboBoxMarriageYear.Location = new System.Drawing.Point(574, 139);
             this.comboBoxMarriageYear.Name = "comboBoxMarriageYear";
             this.comboBoxMarriageYear.Size = new System.Drawing.Size(72, 21);
             this.comboBoxMarriageYear.TabIndex = 7;
@@ -1034,7 +1040,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(343, 9);
+            this.label4.Location = new System.Drawing.Point(343, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 55;
@@ -1079,14 +1085,14 @@
             "29",
             "30",
             "31"});
-            this.comboBoxMarriageDay.Location = new System.Drawing.Point(525, 111);
+            this.comboBoxMarriageDay.Location = new System.Drawing.Point(525, 140);
             this.comboBoxMarriageDay.Name = "comboBoxMarriageDay";
             this.comboBoxMarriageDay.Size = new System.Drawing.Size(43, 21);
             this.comboBoxMarriageDay.TabIndex = 6;
             // 
             // textBoxSpouseLastName
             // 
-            this.textBoxSpouseLastName.Location = new System.Drawing.Point(436, 58);
+            this.textBoxSpouseLastName.Location = new System.Drawing.Point(436, 87);
             this.textBoxSpouseLastName.Name = "textBoxSpouseLastName";
             this.textBoxSpouseLastName.Size = new System.Drawing.Size(210, 20);
             this.textBoxSpouseLastName.TabIndex = 3;
@@ -1112,7 +1118,7 @@
             "October",
             "November",
             "December"});
-            this.comboBoxMarriageMonth.Location = new System.Drawing.Point(436, 110);
+            this.comboBoxMarriageMonth.Location = new System.Drawing.Point(436, 139);
             this.comboBoxMarriageMonth.Name = "comboBoxMarriageMonth";
             this.comboBoxMarriageMonth.Size = new System.Drawing.Size(83, 21);
             this.comboBoxMarriageMonth.TabIndex = 5;
@@ -1120,7 +1126,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(343, 113);
+            this.label5.Location = new System.Drawing.Point(343, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 55;
@@ -1128,14 +1134,14 @@
             // 
             // textBoxSpouseMiddleName
             // 
-            this.textBoxSpouseMiddleName.Location = new System.Drawing.Point(436, 32);
+            this.textBoxSpouseMiddleName.Location = new System.Drawing.Point(436, 61);
             this.textBoxSpouseMiddleName.Name = "textBoxSpouseMiddleName";
             this.textBoxSpouseMiddleName.Size = new System.Drawing.Size(210, 20);
             this.textBoxSpouseMiddleName.TabIndex = 2;
             // 
             // textBoxSpouseFirstName
             // 
-            this.textBoxSpouseFirstName.Location = new System.Drawing.Point(436, 6);
+            this.textBoxSpouseFirstName.Location = new System.Drawing.Point(436, 35);
             this.textBoxSpouseFirstName.Name = "textBoxSpouseFirstName";
             this.textBoxSpouseFirstName.Size = new System.Drawing.Size(210, 20);
             this.textBoxSpouseFirstName.TabIndex = 1;
@@ -1143,14 +1149,14 @@
             // 
             // textBoxSpouseMaidenName
             // 
-            this.textBoxSpouseMaidenName.Location = new System.Drawing.Point(436, 84);
+            this.textBoxSpouseMaidenName.Location = new System.Drawing.Point(436, 113);
             this.textBoxSpouseMaidenName.Name = "textBoxSpouseMaidenName";
             this.textBoxSpouseMaidenName.Size = new System.Drawing.Size(210, 20);
             this.textBoxSpouseMaidenName.TabIndex = 4;
             // 
             // textBoxMarriageState
             // 
-            this.textBoxMarriageState.Location = new System.Drawing.Point(436, 189);
+            this.textBoxMarriageState.Location = new System.Drawing.Point(436, 218);
             this.textBoxMarriageState.Name = "textBoxMarriageState";
             this.textBoxMarriageState.Size = new System.Drawing.Size(210, 20);
             this.textBoxMarriageState.TabIndex = 10;
@@ -1158,7 +1164,7 @@
             // 
             // textBoxMarriageCountry
             // 
-            this.textBoxMarriageCountry.Location = new System.Drawing.Point(436, 215);
+            this.textBoxMarriageCountry.Location = new System.Drawing.Point(436, 244);
             this.textBoxMarriageCountry.Name = "textBoxMarriageCountry";
             this.textBoxMarriageCountry.Size = new System.Drawing.Size(210, 20);
             this.textBoxMarriageCountry.TabIndex = 11;
@@ -1190,7 +1196,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(343, 113);
+            this.label23.Location = new System.Drawing.Point(335, 142);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(43, 13);
             this.label23.TabIndex = 74;
@@ -1202,14 +1208,14 @@
             this.comboBoxMother.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxMother.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMother.FormattingEnabled = true;
-            this.comboBoxMother.Location = new System.Drawing.Point(426, 110);
+            this.comboBoxMother.Location = new System.Drawing.Point(418, 139);
             this.comboBoxMother.Name = "comboBoxMother";
             this.comboBoxMother.Size = new System.Drawing.Size(220, 21);
             this.comboBoxMother.TabIndex = 73;
             // 
             // buttonRemoveChild
             // 
-            this.buttonRemoveChild.Location = new System.Drawing.Point(571, 137);
+            this.buttonRemoveChild.Location = new System.Drawing.Point(563, 6);
             this.buttonRemoveChild.Name = "buttonRemoveChild";
             this.buttonRemoveChild.Size = new System.Drawing.Size(75, 23);
             this.buttonRemoveChild.TabIndex = 72;
@@ -1219,7 +1225,7 @@
             // 
             // buttonUpdateChild
             // 
-            this.buttonUpdateChild.Location = new System.Drawing.Point(490, 137);
+            this.buttonUpdateChild.Location = new System.Drawing.Point(482, 6);
             this.buttonUpdateChild.Name = "buttonUpdateChild";
             this.buttonUpdateChild.Size = new System.Drawing.Size(75, 23);
             this.buttonUpdateChild.TabIndex = 71;
@@ -1229,7 +1235,7 @@
             // 
             // buttonAddChild
             // 
-            this.buttonAddChild.Location = new System.Drawing.Point(409, 137);
+            this.buttonAddChild.Location = new System.Drawing.Point(401, 6);
             this.buttonAddChild.Name = "buttonAddChild";
             this.buttonAddChild.Size = new System.Drawing.Size(75, 23);
             this.buttonAddChild.TabIndex = 70;
@@ -1240,7 +1246,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(343, 87);
+            this.label10.Location = new System.Drawing.Point(335, 116);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 13);
             this.label10.TabIndex = 69;
@@ -1249,7 +1255,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(343, 61);
+            this.label9.Location = new System.Drawing.Point(335, 90);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 13);
             this.label9.TabIndex = 68;
@@ -1258,7 +1264,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(343, 35);
+            this.label8.Location = new System.Drawing.Point(335, 64);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 13);
             this.label8.TabIndex = 67;
@@ -1267,7 +1273,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(343, 9);
+            this.label7.Location = new System.Drawing.Point(335, 38);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 63;
@@ -1275,7 +1281,7 @@
             // 
             // textBoxChildFirstName
             // 
-            this.textBoxChildFirstName.Location = new System.Drawing.Point(426, 6);
+            this.textBoxChildFirstName.Location = new System.Drawing.Point(418, 35);
             this.textBoxChildFirstName.Name = "textBoxChildFirstName";
             this.textBoxChildFirstName.Size = new System.Drawing.Size(220, 20);
             this.textBoxChildFirstName.TabIndex = 1;
@@ -1283,21 +1289,21 @@
             // 
             // textBoxChildMiddleName
             // 
-            this.textBoxChildMiddleName.Location = new System.Drawing.Point(426, 32);
+            this.textBoxChildMiddleName.Location = new System.Drawing.Point(418, 61);
             this.textBoxChildMiddleName.Name = "textBoxChildMiddleName";
             this.textBoxChildMiddleName.Size = new System.Drawing.Size(220, 20);
             this.textBoxChildMiddleName.TabIndex = 2;
             // 
             // textBoxChildLastName
             // 
-            this.textBoxChildLastName.Location = new System.Drawing.Point(426, 58);
+            this.textBoxChildLastName.Location = new System.Drawing.Point(418, 87);
             this.textBoxChildLastName.Name = "textBoxChildLastName";
             this.textBoxChildLastName.Size = new System.Drawing.Size(220, 20);
             this.textBoxChildLastName.TabIndex = 3;
             // 
             // textBoxChildMaidenName
             // 
-            this.textBoxChildMaidenName.Location = new System.Drawing.Point(426, 84);
+            this.textBoxChildMaidenName.Location = new System.Drawing.Point(418, 113);
             this.textBoxChildMaidenName.Name = "textBoxChildMaidenName";
             this.textBoxChildMaidenName.Size = new System.Drawing.Size(220, 20);
             this.textBoxChildMaidenName.TabIndex = 4;
@@ -1340,6 +1346,7 @@
             this.tabPageResidences.TabIndex = 7;
             this.tabPageResidences.Text = "Residences";
             this.tabPageResidences.UseVisualStyleBackColor = true;
+            this.tabPageResidences.Click += new System.EventHandler(this.tabPageResidences_Click);
             // 
             // comboBoxResidenceCounty
             // 
@@ -1449,7 +1456,7 @@
             "Williamson ",
             "Winnebago ",
             "Woodford"});
-            this.comboBoxResidenceCounty.Location = new System.Drawing.Point(417, 32);
+            this.comboBoxResidenceCounty.Location = new System.Drawing.Point(416, 61);
             this.comboBoxResidenceCounty.Name = "comboBoxResidenceCounty";
             this.comboBoxResidenceCounty.Size = new System.Drawing.Size(229, 21);
             this.comboBoxResidenceCounty.TabIndex = 69;
@@ -1457,7 +1464,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(356, 140);
+            this.label22.Location = new System.Drawing.Point(355, 169);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(57, 13);
             this.label22.TabIndex = 72;
@@ -1466,7 +1473,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(356, 118);
+            this.label21.Location = new System.Drawing.Point(355, 147);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(49, 13);
             this.label21.TabIndex = 71;
@@ -1475,7 +1482,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(356, 35);
+            this.label20.Location = new System.Drawing.Point(355, 64);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(43, 13);
             this.label20.TabIndex = 70;
@@ -1484,7 +1491,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(356, 61);
+            this.label19.Location = new System.Drawing.Point(355, 90);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(32, 13);
             this.label19.TabIndex = 69;
@@ -1493,7 +1500,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(356, 87);
+            this.label18.Location = new System.Drawing.Point(355, 116);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(43, 13);
             this.label18.TabIndex = 68;
@@ -1502,7 +1509,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(356, 9);
+            this.label14.Location = new System.Drawing.Point(355, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(27, 13);
             this.label14.TabIndex = 67;
@@ -1510,7 +1517,7 @@
             // 
             // textBoxResidenceCountry
             // 
-            this.textBoxResidenceCountry.Location = new System.Drawing.Point(417, 84);
+            this.textBoxResidenceCountry.Location = new System.Drawing.Point(416, 113);
             this.textBoxResidenceCountry.Name = "textBoxResidenceCountry";
             this.textBoxResidenceCountry.Size = new System.Drawing.Size(229, 20);
             this.textBoxResidenceCountry.TabIndex = 4;
@@ -1518,7 +1525,7 @@
             // 
             // textBoxResidenceState
             // 
-            this.textBoxResidenceState.Location = new System.Drawing.Point(417, 58);
+            this.textBoxResidenceState.Location = new System.Drawing.Point(416, 87);
             this.textBoxResidenceState.Name = "textBoxResidenceState";
             this.textBoxResidenceState.Size = new System.Drawing.Size(229, 20);
             this.textBoxResidenceState.TabIndex = 3;
@@ -1526,7 +1533,7 @@
             // 
             // textBoxResidenceCity
             // 
-            this.textBoxResidenceCity.Location = new System.Drawing.Point(417, 6);
+            this.textBoxResidenceCity.Location = new System.Drawing.Point(416, 35);
             this.textBoxResidenceCity.Name = "textBoxResidenceCity";
             this.textBoxResidenceCity.Size = new System.Drawing.Size(229, 20);
             this.textBoxResidenceCity.TabIndex = 1;
@@ -1791,7 +1798,7 @@
             "1898",
             "1899",
             "1900"});
-            this.comboBoxMoveOutYear.Location = new System.Drawing.Point(574, 137);
+            this.comboBoxMoveOutYear.Location = new System.Drawing.Point(573, 166);
             this.comboBoxMoveOutYear.Name = "comboBoxMoveOutYear";
             this.comboBoxMoveOutYear.Size = new System.Drawing.Size(72, 21);
             this.comboBoxMoveOutYear.TabIndex = 10;
@@ -1835,7 +1842,7 @@
             "29",
             "30",
             "31"});
-            this.comboBoxMoveOutDay.Location = new System.Drawing.Point(525, 137);
+            this.comboBoxMoveOutDay.Location = new System.Drawing.Point(524, 166);
             this.comboBoxMoveOutDay.Name = "comboBoxMoveOutDay";
             this.comboBoxMoveOutDay.Size = new System.Drawing.Size(43, 21);
             this.comboBoxMoveOutDay.TabIndex = 9;
@@ -1860,7 +1867,7 @@
             "October",
             "November",
             "December"});
-            this.comboBoxMoveOutMonth.Location = new System.Drawing.Point(417, 137);
+            this.comboBoxMoveOutMonth.Location = new System.Drawing.Point(416, 166);
             this.comboBoxMoveOutMonth.Name = "comboBoxMoveOutMonth";
             this.comboBoxMoveOutMonth.Size = new System.Drawing.Size(102, 21);
             this.comboBoxMoveOutMonth.TabIndex = 8;
@@ -2124,7 +2131,7 @@
             "1898",
             "1899",
             "1900"});
-            this.comboBoxMoveInYear.Location = new System.Drawing.Point(574, 110);
+            this.comboBoxMoveInYear.Location = new System.Drawing.Point(573, 139);
             this.comboBoxMoveInYear.Name = "comboBoxMoveInYear";
             this.comboBoxMoveInYear.Size = new System.Drawing.Size(72, 21);
             this.comboBoxMoveInYear.TabIndex = 7;
@@ -2168,7 +2175,7 @@
             "29",
             "30",
             "31"});
-            this.comboBoxMoveInDay.Location = new System.Drawing.Point(525, 110);
+            this.comboBoxMoveInDay.Location = new System.Drawing.Point(524, 139);
             this.comboBoxMoveInDay.Name = "comboBoxMoveInDay";
             this.comboBoxMoveInDay.Size = new System.Drawing.Size(43, 21);
             this.comboBoxMoveInDay.TabIndex = 6;
@@ -2193,14 +2200,14 @@
             "October",
             "November",
             "December"});
-            this.comboBoxMoveInMonth.Location = new System.Drawing.Point(417, 110);
+            this.comboBoxMoveInMonth.Location = new System.Drawing.Point(416, 139);
             this.comboBoxMoveInMonth.Name = "comboBoxMoveInMonth";
             this.comboBoxMoveInMonth.Size = new System.Drawing.Size(102, 21);
             this.comboBoxMoveInMonth.TabIndex = 5;
             // 
             // buttonRemoveResidence
             // 
-            this.buttonRemoveResidence.Location = new System.Drawing.Point(571, 164);
+            this.buttonRemoveResidence.Location = new System.Drawing.Point(570, 6);
             this.buttonRemoveResidence.Name = "buttonRemoveResidence";
             this.buttonRemoveResidence.Size = new System.Drawing.Size(75, 23);
             this.buttonRemoveResidence.TabIndex = 25;
@@ -2210,7 +2217,7 @@
             // 
             // buttonUpdateResidence
             // 
-            this.buttonUpdateResidence.Location = new System.Drawing.Point(490, 164);
+            this.buttonUpdateResidence.Location = new System.Drawing.Point(489, 6);
             this.buttonUpdateResidence.Name = "buttonUpdateResidence";
             this.buttonUpdateResidence.Size = new System.Drawing.Size(75, 23);
             this.buttonUpdateResidence.TabIndex = 24;
@@ -2220,7 +2227,7 @@
             // 
             // buttonAddResidence
             // 
-            this.buttonAddResidence.Location = new System.Drawing.Point(409, 164);
+            this.buttonAddResidence.Location = new System.Drawing.Point(408, 6);
             this.buttonAddResidence.Name = "buttonAddResidence";
             this.buttonAddResidence.Size = new System.Drawing.Size(75, 23);
             this.buttonAddResidence.TabIndex = 23;
@@ -2248,6 +2255,17 @@
             this.tabResidenceText.Text = "Residence Text";
             this.tabResidenceText.UseVisualStyleBackColor = true;
             // 
+            // textBoxResidenceText
+            // 
+            this.textBoxResidenceText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxResidenceText.Location = new System.Drawing.Point(7, 7);
+            this.textBoxResidenceText.Multiline = true;
+            this.textBoxResidenceText.Name = "textBoxResidenceText";
+            this.textBoxResidenceText.Size = new System.Drawing.Size(650, 294);
+            this.textBoxResidenceText.TabIndex = 0;
+            // 
             // tabPageMarker
             // 
             this.tabPageMarker.Controls.Add(this.textBoxMarker);
@@ -2261,6 +2279,9 @@
             // 
             // textBoxMarker
             // 
+            this.textBoxMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxMarker.Location = new System.Drawing.Point(0, 3);
             this.textBoxMarker.Multiline = true;
             this.textBoxMarker.Name = "textBoxMarker";
@@ -2280,6 +2301,9 @@
             // 
             // textBoxExtra
             // 
+            this.textBoxExtra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxExtra.Location = new System.Drawing.Point(6, 6);
             this.textBoxExtra.Multiline = true;
             this.textBoxExtra.Name = "textBoxExtra";
@@ -2299,6 +2323,9 @@
             // 
             // textBoxSources
             // 
+            this.textBoxSources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSources.Location = new System.Drawing.Point(6, 6);
             this.textBoxSources.Multiline = true;
             this.textBoxSources.Name = "textBoxSources";
@@ -3583,14 +3610,6 @@
             this.comboBoxDeathCounty.Size = new System.Drawing.Size(229, 21);
             this.comboBoxDeathCounty.TabIndex = 68;
             this.comboBoxDeathCounty.TextChanged += new System.EventHandler(this.comboBoxDeathCounty_TextChanged);
-            // 
-            // textBoxResidenceText
-            // 
-            this.textBoxResidenceText.Location = new System.Drawing.Point(7, 7);
-            this.textBoxResidenceText.Multiline = true;
-            this.textBoxResidenceText.Name = "textBoxResidenceText";
-            this.textBoxResidenceText.Size = new System.Drawing.Size(650, 294);
-            this.textBoxResidenceText.TabIndex = 0;
             // 
             // DetailsForm
             // 
