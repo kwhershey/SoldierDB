@@ -710,6 +710,7 @@ namespace Soldiers
             soldierForm.Show();
         }
 
+
         private void buttonAddSoldier_Click(object sender, EventArgs e)
         {
             //DetailsForm soldierForm = new DetailsForm(new Soldier() , true,this);
@@ -865,6 +866,15 @@ namespace Soldiers
         {
             SearchForm newSearch = new SearchForm(this);
             newSearch.Show();
+        }
+
+        private void listViewSoldiers_DoubleClick(object sender, EventArgs e)
+        {
+            if(listViewSoldiers.SelectedItems.Count == 1)
+            {
+                DetailsForm soldierForm = new DetailsForm((Soldier)listViewSoldiers.SelectedItems[0].Tag, false, this);
+                soldierForm.Show();
+            }
         }
 
 

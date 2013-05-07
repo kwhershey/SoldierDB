@@ -65,6 +65,7 @@
             this.listViewSoldiers.UseCompatibleStateImageBehavior = false;
             this.listViewSoldiers.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewSoldiers_ColumnClick);
             this.listViewSoldiers.SelectedIndexChanged += new System.EventHandler(this.listViewSoldiers_SelectedIndexChanged);
+            this.listViewSoldiers.DoubleClick += new System.EventHandler(this.listViewSoldiers_DoubleClick);
             // 
             // menuStripMain
             // 
